@@ -1,8 +1,10 @@
-/* Navigation secondaire------------------------ */
+/* Navigation secondaire------------------------------------------- */
 
 .nav-secondaire{
     background-color: grey;
     height:40px;
+    font-size:20px;
+    
 }
 
 .nav-secondaire ul{
@@ -11,28 +13,97 @@
 }
 
 .nav-secondaire li{
+    display:flex;
     list-style: none;
-    margin: 20px 80px 0 30px;
 }
 
 .nav-secondaire a{
     text-decoration: none;
+    margin: 15px 10px 0 30px;
+    color:white;
+}
+
+.nav-secondaire img {
+    width:30px;
 }
 
 #service {
     margin-right: auto;
 }
 
-/* Header ------------------------ */
-
-.header{
-    background-color:rgb(54, 53, 53);
-    height:100px;
+#shop{
+    margin-right:50px;
 }
 
-/* Navigation principal------------------------ */
+/* Header ------------------------------------------------------------ */
+
+.header{
+    font-size:20px;
+    background-color:white;
+    display:flex;
+    justify-content:space-between; 
+}
+
+#logo{
+    width: 15%;
+}
+
+#carte{
+    margin-top:30px;
+    width: 9%;
+    height:80px;
+}
+
+#search{
+    width:3%;
+    position:absolute;
+    top:0px;
+    right:-10px;
+    background-color:rgb(204, 204, 130);
+    padding:15px;
+    border-radius: 10px;
+}
+
+.search{
+    background-color:grey;
+    margin-top:50px;
+    width:50%;
+    height: 50px;
+    border-radius: 10px 0 0 0px;
+    position:relative;
+}
+
+.search input{
+    width:100%;
+    height:100%;
+    background-color:rgb(56, 47, 47);
+    padding-left: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+    color:white;
+     
+    
+}
+
+
+
+/* Navigation principal------------------------------------------------ */
 
 .nav-principal{
     background-color:rgb(34, 165, 69);
     height:50px;
+}
+
+.nav-principal ul {
+    display:flex;
+    justify-content:center;
+}
+
+.nav-principal li {
+    list-style: none;
+    margin:0 30px;
+}
+
+.nav-principal a {
+    text-decoration: none;
 }
