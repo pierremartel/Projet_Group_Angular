@@ -5,40 +5,40 @@
                 <a href="#">Comment ça marche ?</a>  
             </li>
             <li>
-                <a href="#">Se connecter</a>
-                <img src="./assets/logo_icon/user.svg" alt="logo connexion">
+                <a routerLink="authenticate" >Se connecter</a>
+                <img [src]="iconUser" alt="logo connexion">
             </li>
             <li>
                 <a href="#">Panier</a>
-                <img id="shop" src="./assets/logo_icon/shop.svg" alt="logo panier">
+                <img id="shop" [src]="iconShop" alt="logo panier">
             </li>
         </ul>
     </nav>
     <div class="header">
-        <img id="logo" src="./assets/logo_icon/logo.png" alt="logo">
+        <img id="logo" [src]="logo" alt="logo">
         <div class="search">
             <input type="text" placeholder="Taper votre recherche">
-            <a href="#"><img id="search" src="./assets/logo_icon/search.svg" alt="search" ></a>
+            <a href="#"><img id="search" [src]="search" alt="search" ></a>
         </div>
        
-        <img id="carte" src="./assets/logo_icon/carte.png" alt="carte">
+        <img id="carte" [src]="map" alt="carte">
     </div>
     <nav class="nav-principal">
         <ul>
             <li>
-                <a href="#">Accueil</a>
+                <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
             </li>
             <li>
-                <a href="#">Produits</a>
+                <a>Produits</a>
             </li>
             <li>
-                <a href="#">Producteurs</a>
+                <a>Producteurs</a>
             </li>
             <li>
-                <a href="#">Promotions</a>
+                <a>Promotions</a>
             </li>
             <li>
-                <a href="#">Qui sommes-nous?</a>
+                <a>Qui sommes-nous?</a>
             </li>
         </ul>
        

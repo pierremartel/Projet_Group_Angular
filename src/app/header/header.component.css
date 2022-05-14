@@ -94,7 +94,7 @@
 /* Navigation principal------------------------------------------------ */
 
 .nav-principal{
-    background-color:rgb(54, 223, 99);
+    background-color:rgb(97, 153, 112);
     height:50px;
     
 }
@@ -115,4 +115,9 @@
     text-decoration: none;
     color:black;
     font-size: 18px;
+}
+
+.active {
+    background-color:rgb(196, 179, 179);
+    text-decoration: underline;
 }
