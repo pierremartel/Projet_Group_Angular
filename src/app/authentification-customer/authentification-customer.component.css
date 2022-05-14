@@ -1,0 +1,29 @@
+.main {
+    margin:auto;
+    margin-top:50px;
+    width:70%;
+    height:auto;
+    display:flex;
+    justify-content:space-between;
+    border: 1px solid;
+}
+
+.form-1, .form-2 {
+    border: 1px solid;
+    margin:40px;
+}
+
+form{
+    margin: 10px 10px 20px 10px;
+}
+
+input {
+    border:1px solid;
+}
+
+h2{
+    margin: 10px 10px 20px 10px;
+    font-size:30px;
+    font-weight: bold;
+    border:1px solid;
+}
