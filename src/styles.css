@@ -6,3 +6,10 @@
     font: inherit;
     vertical-align: baseline;
 }
+
+button{
+    background-color:rgb(226, 226, 112);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
