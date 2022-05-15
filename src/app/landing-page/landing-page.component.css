@@ -1,5 +1,57 @@
+/* banniere--------------------------------------------------------------------------------- */
+
 .banniere {
     margin:auto;
     width: 90%;
     height:300px;
+    text-align: center;
+}
+
+.banniere button {
+    cursor:pointer;
+    border-radius: 10px;
+    font-size: 28px;
+    padding: 10px;
+    transform: translate(0, 200px);
+    background-color:rgba(226, 226, 112, 0.5);   
+}
+
+/* Caroussel--------------------------------------------------------------------------------------- */
+
+.new-product{
+    width:90%;
+    margin:auto;
+    margin-top:50px;
+    box-shadow: 0px -2px 5px rgb(115, 115, 121);
+}
+
+.new-product-title{
+    display:flex;
+    justify-content:space-between;
+    font-size:24px;
+    font-weight: 600;
+    margin:30px 0px;
+}
+
+.new-product-title button {
+    background-color: rgb(223, 60, 60);
+}
+
+.arrow{
+    cursor: pointer;
+}
+.product{
+    margin:5px;
+    width: 280px;
+
+}
+
+.new-product-button{
+    background-color:rgb(226, 226, 112);
+    border-radius:10px;
+    padding:5px;
+    font-size:20px;
+    font-weight: 500;
+    transform: translate(170px);
+    cursor: pointer;
 }
