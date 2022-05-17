@@ -11,6 +11,8 @@ import { LandingPageNewproductsComponent } from './landing-page-newproducts/land
 import { LandingPageServicesComponent } from './landing-page-services/landing-page-services.component';
 import { LandingPageBestsellComponent } from './landing-page-bestsell/landing-page-bestsell.component';
 import { LandingPageCommentsComponent } from './landing-page-comments/landing-page-comments.component';
+import { CardNewproductsComponent } from './card-newproducts/card-newproducts.component';
+import { CardBestsellComponent } from './card-bestsell/card-bestsell.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { LandingPageCommentsComponent } from './landing-page-comments/landing-pa
     LandingPageNewproductsComponent,
     LandingPageServicesComponent,
     LandingPageBestsellComponent,
-    LandingPageCommentsComponent
+    LandingPageCommentsComponent,
+    CardNewproductsComponent,
+    CardBestsellComponent
   ],
   imports: [
     BrowserModule,

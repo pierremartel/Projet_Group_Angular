@@ -3,43 +3,14 @@
         <h2>Nos nouveaux arrivage</h2>
         <button>Plus de produits</button>
     </div>
-   
-    <div class="new-product-picture">
+    <div class="card">
         <img class="arrow" [src]="arrow_g" alt="" >
-        <div class="product-content">
-            <img class="product-image" [src]="clementine" alt="" >
-            <h2>Clementines</h2>
-            <p>2€</p>
-            <button class="new-product-button">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="product-content">
-            <img class="product-image" [src]="carrots" alt="" >
-            <h2>Carrotes</h2>
-            <p>2€</p>
-            <button class="new-product-button">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="product-content">
-            <img class="product-image" [src]="chicken" alt="" >
-            <h2>Poulets</h2>
-            <p>2€</p>
-            <button class="new-product-button">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="product-content">
-           <img class="product-image" [src]="sausages" alt="" >
-           <h2>Saucisses</h2>
-            <p>2€</p> 
-           <button class="new-product-button">
-            Ajouter au panier
-            </button>
-        </div>
+
+        <app-card-newproducts *ngFor="let product of products" [product]="product"></app-card-newproducts>
+
         <img class="arrow" [src]="arrow_d" alt="" >
     </div>
-   
+    
+
 </section>
 
