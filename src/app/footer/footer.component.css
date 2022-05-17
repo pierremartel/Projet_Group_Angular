@@ -1,0 +1,24 @@
+.footer-principal{
+    height:150px;
+    background-color:rgb(130, 188, 130);
+}
+
+.footer-secondaire {
+    height:30px;
+    background-color: rgb(53, 48, 48);
+}
+
+.footer-principal, .footer-secondaire {
+    display:flex;
+    justify-content:space-between;
+    padding:10px 10px;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+
+li{
+    list-style:none;
+}
