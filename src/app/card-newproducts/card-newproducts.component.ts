@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ListProducts } from '../models/product.model';
+import { ListProductsService } from '../services/list-products.service';
 
 @Component({
   selector: 'app-card-newproducts',
@@ -9,6 +10,7 @@ import { ListProducts } from '../models/product.model';
 export class CardNewproductsComponent implements OnInit {
 
   @Input() product!: ListProducts;
+
   // carrots! : string;
   // pickles! : string;
   // pasta! : string;
@@ -19,7 +21,7 @@ export class CardNewproductsComponent implements OnInit {
   // arrow_d! : string;
   // arrow_g! : string;
 
-  constructor() { }
+  constructor(private listproductsservices: ListProductsService) { }
 
   ngOnInit(): void {
     // this.carrots = './assets/photos/carotes.jpg';
@@ -32,5 +34,7 @@ export class CardNewproductsComponent implements OnInit {
     // this.arrow_d = './assets/logo_icon/arrow_droite.png';
     // this.arrow_g = './assets/logo_icon/arrow_gauche.png';
   }
+
+  
 
 }
