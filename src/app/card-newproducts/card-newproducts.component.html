@@ -1,37 +1,15 @@
 <div class="new-product-picture">
-    <!-- <img class="arrow" [src]="arrow_g" alt="" > -->
-    <div class="product-content">
-        <img class="product-image" [src]="product.imageUrl" [alt]="product.title" > 
-        <h2>{{product.title}}</h2>
-        <p>{{product.region}}</p>
-        <p>{{product.price}}€</p>
-        <button class="new-product-button">
-            Ajouter au panier
-        </button> 
-    </div>
-    <!-- <div class="product-content">
-        <img class="product-image" [src]="carrots" alt="" >
-        <h2>Carrotes</h2>
-        <p>2€</p>
-        <button class="new-product-button">
-            Ajouter au panier
-        </button>
-    </div>
-    <div class="product-content">
-        <img class="product-image" [src]="chicken" alt="" >
-        <h2>Poulets</h2>
-        <p>2€</p>
-        <button class="new-product-button">
-            Ajouter au panier
-        </button>
-    </div>
-    <div class="product-content">
-       <img class="product-image" [src]="sausages" alt="" >
-       <h2>Saucisses</h2>
-        <p>2€</p> 
-       <button class="new-product-button">
-        Ajouter au panier
-        </button>
-    </div> -->
-    <!-- <img class="arrow" [src]="arrow_d" alt="" > -->
+  <!-- <img class="arrow" [src]="arrow_g" alt="" > -->
+  <div class="product-content">
+    <img
+      class="product-image"
+      [src]=product.imageFileName
+      alt="product.title"
+    />
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price }}€</p>
+    <button class="new-product-button">
+      Ajouter au panier
+    </button>
+  </div>
 </div>

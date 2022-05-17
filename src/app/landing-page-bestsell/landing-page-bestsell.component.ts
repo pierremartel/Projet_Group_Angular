@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ListProducts } from '../models/product.model';
-import { ListProductsService } from '../services/list-products.service';
 
 @Component({
   selector: 'app-landing-page-bestsell',
@@ -14,14 +13,12 @@ export class LandingPageBestsellComponent implements OnInit {
   arrow_d! : string;
 
   
-    constructor(private listproductservice:ListProductsService) { }
+    constructor() { }
   
     ngOnInit(): void {
       this.arrow_g = './assets/logo_icon/arrow_gauche.png';
       this.arrow_d = './assets/logo_icon/arrow_droite.png';
 
-
-      this.products = this.listproductservice.getAllProducts();
     }
   
   }

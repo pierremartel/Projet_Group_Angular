@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ListProducts } from '../models/product.model';
 
+
 @Component({
-  selector: 'app-card-newproducts',
-  templateUrl: './card-newproducts.component.html',
-  styleUrls: ['./card-newproducts.component.css']
+  selector: "app-card-newproducts",
+  templateUrl: "./card-newproducts.component.html",
+  styleUrls: ["./card-newproducts.component.css"]
 })
 export class CardNewproductsComponent implements OnInit {
 
