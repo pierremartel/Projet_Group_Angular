@@ -4,5 +4,5 @@ export class ListProducts {
     description? : string;
     imageUrl! : string;
     price! : number;
-    region? : string;
+    region! : string;
 }

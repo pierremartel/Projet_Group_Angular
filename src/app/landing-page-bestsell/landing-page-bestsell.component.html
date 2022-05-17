@@ -1,44 +1,15 @@
 <section class="new-product">
     <div class="new-product-title">
-        <h2>Nos meilleurs ventes du mois</h2>
+        <h2>Nos Meilleurs produits du mois</h2>
         <button>Plus de produits</button>
     </div>
-   
-    <div class="new-product-picture">
+    <div class="card">
         <img class="arrow" [src]="arrow_g" alt="" >
-        <div class="product-content">
-            <img class="product-image" [src]="clementine" alt="" >
-            <h2>Clementines</h2>
-            <p>2€</p>
-            <button class="new-product-button">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="product-content">
-            <img class="product-image" [src]="carrots" alt="" >
-            <h2>Carrotes</h2>
-            <p>2€</p>
-            <button class="new-product-button">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="product-content">
-            <img class="product-image" [src]="chicken" alt="" >
-            <h2>Poulets</h2>
-            <p>2€</p>
-            <button class="new-product-button">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="product-content">
-           <img class="product-image" [src]="sausages" alt="" >
-           <h2>Saucisses</h2>
-            <p>2€</p> 
-           <button class="new-product-button">
-            Ajouter au panier
-            </button>
-        </div>
+
+        <app-card-bestsell *ngFor="let product of products" [product]="product"></app-card-bestsell>
+
         <img class="arrow" [src]="arrow_d" alt="" >
     </div>
-   
+    
+
 </section>
