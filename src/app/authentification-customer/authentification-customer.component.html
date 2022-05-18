@@ -20,14 +20,14 @@
             </h2>
         </div>
        
-        <form action="#" method="post">
+        <form action="http://localhost:8000/inscription" method="post">
             <div>
-                <label for="surname">Nom*</label>
-                <input type="text" name="surname" id="surname" placeholder="Nom" required>
+                <label for="username">Nom*</label>
+                <input type="text" name="username" id="surname" placeholder="Nom" required>
             </div>
             <div>
-                <label for="name">Prénom*</label>
-                <input type="text" name="name" id="name" placeholder="Prénom" required>
+                <label for="userfirstname">Prénom*</label>
+                <input type="text" name="userfirstname" id="name" placeholder="Prénom" required>
             </div>
             <div>
                 <label for="address">Adresse*</label>
@@ -48,6 +48,10 @@
             <div>
                 <label for="password">Mot de passe*</label>
                 <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+            </div>
+            <div>
+                <label for="confirm_password">Mot de passe*</label>
+                <input type="password" name="confirm_password" id="password" placeholder="Confirmer votre mot de passe" required>
             </div>
 
             <div class="button"> 
