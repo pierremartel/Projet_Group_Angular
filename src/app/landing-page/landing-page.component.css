@@ -16,6 +16,24 @@
     background-color:rgba(226, 226, 112, 0.5);   
 }
 
+.btn{
+    height:50px;
+    width:50px;
+    background-color:rgb(109, 109, 170);
+    cursor:pointer;
+    position:fixed;
+    right:10px;
+    bottom:30px;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon {
+    width:20px;
+}
+
 /* Caroussel--------------------------------------------------------------------------------------- */
 
 
