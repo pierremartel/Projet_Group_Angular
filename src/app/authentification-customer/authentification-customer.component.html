@@ -1,0 +1,95 @@
+<!-- Fil d'ariane ----------------------------------------------------------- -->
+
+<!-- <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Category</a></li>
+        <li><a href="">Sub-Category</a></li>
+        <li><span aria-current="page">Product</span></li>
+    </ul>
+</nav> -->
+<!-- Fil d'ariane ----------------------------------------------------------- -->
+
+
+<main class="main">
+    <div class="form-1">
+        <div class="title">
+            <img [src]="iconPlus">
+            <h2>
+                Pas encore de compte?<br> <span>Inscrivez-vous</span>
+            </h2>
+        </div>
+       
+        <form action="#" method="post">
+            <div>
+                <label for="surname">Nom*</label>
+                <input type="text" name="surname" id="surname" placeholder="Nom" required>
+            </div>
+            <div>
+                <label for="name">Prénom*</label>
+                <input type="text" name="name" id="name" placeholder="Prénom" required>
+            </div>
+            <div>
+                <label for="address">Adresse*</label>
+                <input type="text" name="address" id="address" placeholder="Adresse" required>
+            </div>
+            <div>
+                <label for="postalcode">Code Postal*</label>
+                <input type="text" name="postalcode" id="postalcode" placeholder="Code postal" required>
+            </div>
+            <div>
+                <label for="city">Ville*</label>
+                <input type="text" name="city" id="city" placeholder="Ville" required>
+            </div>
+            <div>
+                <label for="email">Adresse Mail*</label>
+                <input type="email" name="email" id="email" placeholder="Adresse mail" required>
+            </div>
+            <div>
+                <label for="password">Mot de passe*</label>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+            </div>
+
+            <div class="button"> 
+                <input type="submit" value="Créer un compte">
+            </div>
+            
+        </form>
+    </div>
+
+    <div id="icon_content">
+        <img [src]="icon">
+    </div>
+
+    <div class="form-2">
+        <div class="title">
+            <img [src]="iconArrow">
+            <h2>
+                Déjà inscrit?<br> <span>Identifiez-vous</span>
+            </h2>
+        </div>
+        
+        <form action="#" method="post">
+
+            <div>
+                <label for="email">Adresse Mail*</label>
+                <input type="email" name="email" id="email" placeholder="Adresse mail" required>
+            </div>
+            <div>
+                <label for="password">Mot de passe*</label>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+            </div>
+            <div>
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Se souvenir de moi</label>
+            </div>
+
+            
+            <div class="button"> 
+                <p>Mot de passe oublié ?</p>
+                <input type="submit" value="Connexion">
+            </div>
+
+        </form> 
+    </div>
+</main>

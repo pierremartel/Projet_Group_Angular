@@ -1,0 +1,48 @@
+<header>
+    <nav class="nav-secondaire">
+        <ul>
+            <li id="service">
+                <a href="#">Comment ça marche ?</a>  
+            </li>
+            <li>
+                <a routerLink="authenticate" >Se connecter</a>
+                <img [src]="iconUser" alt="logo connexion">
+            </li>
+            <li>
+                <a href="#">Panier</a>
+                <img id="shop" [src]="iconShop" alt="logo panier">
+            </li>
+        </ul>
+    </nav>
+    <div class="header">
+        <img id="logo" [src]="logo" alt="logo">
+        <div class="search">
+            <input type="text" placeholder="Taper votre recherche">
+            <a href="#"><img id="search" [src]="search" alt="search" ></a>
+        </div>
+       
+        <img id="carte" [src]="map" alt="carte">
+    </div>
+    <nav class="nav-principal">
+        <ul>
+            <li>
+                <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+            </li>
+            <li>
+                <a>Produits</a>
+            </li>
+            <li>
+                <a>Producteurs</a>
+            </li>
+            <li>
+                <a>Promotions</a>
+            </li>
+            <li>
+                <a>Qui sommes-nous?</a>
+            </li>
+        </ul>
+       
+
+
+    </nav>
+</header>

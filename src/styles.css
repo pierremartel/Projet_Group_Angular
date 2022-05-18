@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+* {     
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+button{
+    background-color:rgb(226, 226, 112);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}

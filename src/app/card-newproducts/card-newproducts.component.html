@@ -1,0 +1,15 @@
+<div class="new-product-picture">
+  <!-- <img class="arrow" [src]="arrow_g" alt="" > -->
+  <div class="product-content">
+    <img
+      class="product-image"
+      [src]=product.imageFileName
+      alt="product.title"
+    />
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price }}€</p>
+    <button class="new-product-button">
+      Ajouter au panier
+    </button>
+  </div>
+</div>

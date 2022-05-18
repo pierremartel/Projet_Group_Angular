@@ -1,0 +1,123 @@
+/* Navigation secondaire------------------------------------------- */
+
+.nav-secondaire{
+    background-color: rgb(53, 48, 48);
+    height:40px;
+    font-size:15px;
+    
+}
+
+.nav-secondaire ul{
+    display:flex;
+    justify-content: right;
+}
+
+.nav-secondaire li{
+    display:flex;
+    list-style: none;
+}
+
+.nav-secondaire a{
+    text-decoration: none;
+    margin: 15px 10px 0 30px;
+    color:white;
+}
+
+.nav-secondaire img {
+    width:20px;
+}
+
+#service {
+    margin-right: auto;
+}
+
+#shop{
+    margin-right:50px;
+    padding-top:10px;
+}
+
+/* Header ------------------------------------------------------------ */
+
+.header{
+    font-size:20px;
+    background-color:white;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px; 
+}
+
+#logo{
+    width: 15%;
+}
+
+#carte{
+    margin-top:25px;
+    margin-right:10px;
+    width: 9%;
+    height:80px;
+}
+
+#search{
+    width:3%;
+    position:absolute;
+    top:0px;
+    right:-10px;
+    bottom:5px;
+    background-color:rgb(226, 226, 112);
+    padding:13px;
+    border-radius: 10px;
+}
+
+.search{
+    background-color:rgb(235, 227, 227);
+    margin-top:50px;
+    width:50%;
+    height: 40px;
+    border-radius: 10px 0 0 0px;
+    position:relative;
+}
+
+.search input{
+    width:100%;
+    height:100%;
+    background-color:rgb(211, 197, 197);
+    padding-left: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+    color:white;
+     
+    
+}
+
+
+
+/* Navigation principal------------------------------------------------ */
+
+.nav-principal{
+    background-color:rgb(97, 153, 112);
+    height:50px;
+    
+}
+
+.nav-principal ul {
+    display:flex;
+    justify-content:center;
+    align-content: center;
+}
+
+.nav-principal li {
+    list-style: none;
+    margin:0 40px;
+    margin-top:15px;
+}
+
+.nav-principal a {
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+}
+
+.active {
+    background-color:rgb(196, 179, 179);
+    text-decoration: underline;
+}

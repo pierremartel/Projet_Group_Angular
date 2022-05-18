@@ -1,0 +1,26 @@
+/* banniere--------------------------------------------------------------------------------- */
+
+.banniere {
+    margin:auto;
+    width: 90%;
+    height:300px;
+    text-align: center;
+}
+
+.banniere button {
+    cursor:pointer;
+    border-radius: 10px;
+    font-size: 28px;
+    padding: 10px;
+    transform: translate(0, 200px);
+    background-color:rgba(226, 226, 112, 0.5);   
+}
+
+/* Caroussel--------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* Services------------------------------------------------------------------- */
+
