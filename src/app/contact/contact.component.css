@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.body-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 30px;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    background-color: #fef1df;
+    padding: 30px;
+    
+
+}
+
+.body-form input, .body-form textarea {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    border: 1px solid black;
+    outline-color: #747cdf;
+    border-radius: 5px;
+
+}
+
+form .separation {
+    width: 100%;
+    height: 1px;
+    background-color: #747cdf;
+}
+
+form .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.body-form i {
+    position: absolute;
+    left: 5px;
+    top: 35px;
+    color: #747cdf;
+}
+
+.right {
+    margin-left: 40px;
+}
+
+.right .box {
+    height: 100%;
+}
+
+.body-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+    height: 72%;
+}
+
+.foot_form button:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 920px) {
+    .right, .body-form textarea {
+        margin-left: 0px;
+    }
+}

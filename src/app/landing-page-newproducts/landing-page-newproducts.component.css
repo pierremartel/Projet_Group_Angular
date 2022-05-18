@@ -5,6 +5,7 @@
     margin:auto;
     margin-top:50px;
     box-shadow: 0px -2px 5px rgb(115, 115, 121);
+    
 }
 
 .new-product-title{
@@ -24,6 +25,7 @@
 
 .card{
     display:flex;
+    
 }
 .arrow{
     height:50px;
