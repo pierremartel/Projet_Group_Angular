@@ -31,6 +31,13 @@ export class ListProductsService {
             price: 2,
             region: 'Haut-de-france'
         }  , 
+
+        // {
+        //     imageUrl: './assets/photos/Saucisse_crue.jpg',
+        //     title: 'Saucisses',
+        //     price: 2,
+        //     region: 'Haut-de-france'
+        // }   
         {
             imageFileName: './assets/photos/Saucisse_crue.jpg',
             title: 'Saucisses',
