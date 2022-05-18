@@ -1,7 +1,7 @@
 .comments{
     display:flex;
-    justify-content:space-between;
-    margin: 10px;
+    justify-content:space-around;
+    margin: 20px;
 }
 
 .comments-extract p{
@@ -9,10 +9,11 @@
     font-style: italic;
 }
 
-.comments-content img{
+.comments-content i{
     width:50px;
-    transform:translate(25px);
+    transform:translate(35px);
     margin-bottom:10px;
+    font-size:35px;
     
 }
 
@@ -21,10 +22,15 @@
     display:flex;
     flex-direction:column;
     justify-content:center;
-    border: 5px solid;
+    border: 3px solid;
     border-radius: 20px;
-    padding: 0px 5px;
-    font-weight: 700;
+    padding: 10px 5px;
+    font-weight: 600;
     opacity:0.8;
     
+}
+
+.comments-content p {
+    text-align: center;
+    padding:5px;
 }
