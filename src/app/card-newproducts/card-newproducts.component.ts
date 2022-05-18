@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ListProducts } from '../models/product.model';
-import { ListProductsService } from '../services/list-products.service';
 
 @Component({
   selector: 'app-card-newproducts',
@@ -21,7 +20,7 @@ export class CardNewproductsComponent implements OnInit {
   // arrow_d! : string;
   // arrow_g! : string;
 
-  constructor(private listproductsservices: ListProductsService) { }
+  constructor() { }
 
   ngOnInit(): void {
     // this.carrots = './assets/photos/carotes.jpg';
@@ -35,6 +34,6 @@ export class CardNewproductsComponent implements OnInit {
     // this.arrow_g = './assets/logo_icon/arrow_gauche.png';
   }
 
-  
+
 
 }

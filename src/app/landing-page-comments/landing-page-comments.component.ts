@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageCommentsComponent implements OnInit {
 
+  icon_star! : string;
   constructor() { }
 
   ngOnInit(): void {
+    this.icon_star = './assets/logo_icon/etoile.png';
   }
 
 }

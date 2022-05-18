@@ -1,0 +1,30 @@
+.comments{
+    display:flex;
+    justify-content:space-between;
+    margin: 10px;
+}
+
+.comments-extract p{
+    padding:10px;
+    font-style: italic;
+}
+
+.comments-content img{
+    width:50px;
+    transform:translate(25px);
+    margin-bottom:10px;
+    
+}
+
+.comments-content{
+    height:120px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border: 5px solid;
+    border-radius: 20px;
+    padding: 0px 5px;
+    font-weight: 700;
+    opacity:0.8;
+    
+}
