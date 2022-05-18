@@ -6,13 +6,15 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthentificationCustomerComponent } from './authentification-customer/authentification-customer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AuthentificationCustomerComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
