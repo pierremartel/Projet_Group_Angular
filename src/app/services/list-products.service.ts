@@ -8,35 +8,42 @@ import { ListProducts } from '../models/product.model';
 export class ListProductsService {
     listProducts : ListProducts[] = [
           {
-            imageUrl: './assets/photos/clementine.jpg',
+            imageFileName: './assets/photos/clementine.jpg',
             title: 'Clementine',
             price: 2,
             region: 'Haut-de-france'
         },
         {
-            imageUrl: './assets/photos/carotes.jpg',
+            imageFileName: './assets/photos/carotes.jpg',
             title: 'Carottes',
             price: 2,
             region: 'Haut-de-france'
         },
         {
-            imageUrl: './assets/photos/Filets_de_poitrine_de_poulet_crus.jpg',
+            imageFileName: './assets/photos/Filets_de_poitrine_de_poulet_crus.jpg',
             title: 'Poulets',
             price: 2,
             region: 'Haut-de-france'
         },
         {
-            imageUrl: './assets/photos/Saucisse_crue.jpg',
+            imageFileName: './assets/photos/Saucisse_crue.jpg',
             title: 'Saucisses',
             price: 2,
             region: 'Haut-de-france'
         }  , 
+
         // {
         //     imageUrl: './assets/photos/Saucisse_crue.jpg',
         //     title: 'Saucisses',
         //     price: 2,
         //     region: 'Haut-de-france'
         // }   
+        {
+            imageFileName: './assets/photos/Saucisse_crue.jpg',
+            title: 'Saucisses',
+            price: 2,
+            region: 'Haut-de-france'
+        }   
         ];
 
         getAllProducts(): ListProducts[] {
