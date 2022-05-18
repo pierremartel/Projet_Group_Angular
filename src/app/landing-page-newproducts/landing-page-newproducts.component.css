@@ -1,0 +1,34 @@
+.new-product{
+    /* display:flex; */
+    width:90%;
+    height: 450px;
+    margin:auto;
+    margin-top:50px;
+    box-shadow: 0px -2px 5px rgb(115, 115, 121);
+    
+}
+
+.new-product-title{
+    display:flex;
+    justify-content:space-between;
+    font-size:24px;
+    font-weight: 600;
+    margin:30px 0px;
+}
+
+
+.new-product-title button {
+    background-color: rgb(99, 74, 74);
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.card{
+    display:flex;
+    
+}
+.arrow{
+    height:50px;
+    cursor: pointer;
+    transform:translate(0, 80px);
+}
