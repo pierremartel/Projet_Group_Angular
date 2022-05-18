@@ -6,6 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthentificationCustomerComponent } from './authentification-customer/authentification-customer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+
+import { ContactComponent } from './contact/contact.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageNewproductsComponent } from './landing-page-newproducts/landing-page-newproducts.component';
 import { LandingPageServicesComponent } from './landing-page-services/landing-page-services.component';
@@ -15,12 +18,16 @@ import { CardNewproductsComponent } from './card-newproducts/card-newproducts.co
 import { CardBestsellComponent } from './card-bestsell/card-bestsell.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AuthentificationCustomerComponent,
     LandingPageComponent,
+
+    ContactComponent
+
     FooterComponent,
     LandingPageNewproductsComponent,
     LandingPageServicesComponent,
@@ -28,6 +35,7 @@ import { CardBestsellComponent } from './card-bestsell/card-bestsell.component';
     LandingPageCommentsComponent,
     CardNewproductsComponent,
     CardBestsellComponent
+
   ],
   imports: [
     BrowserModule,
