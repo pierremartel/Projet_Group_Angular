@@ -11,6 +11,8 @@
 <!-- Fil d'ariane ----------------------------------------------------------- -->
 
 
+
+
 <main class="main">
     <div class="form-1">
         <div class="title">
@@ -20,38 +22,38 @@
             </h2>
         </div>
        
-        <form action="http://localhost:8000/inscription" method="post">
+        <form #registerForm="ngForm" method="post" (ngSubmit)="onSubmit(registerForm.value)">
             <div>
                 <label for="username">Nom*</label>
-                <input type="text" name="username" id="surname" placeholder="Nom" required>
+                <input type="text" name="username" id="surname" placeholder="Nom" ngModel>
             </div>
             <div>
                 <label for="userfirstname">Prénom*</label>
-                <input type="text" name="userfirstname" id="name" placeholder="Prénom" required>
+                <input type="text" name="userfirstname" id="name" placeholder="Prénom" ngModel>
             </div>
             <div>
                 <label for="address">Adresse*</label>
-                <input type="text" name="address" id="address" placeholder="Adresse" required>
+                <input type="text" name="address" id="address" placeholder="Adresse" ngModel>
             </div>
             <div>
                 <label for="postalcode">Code Postal*</label>
-                <input type="text" name="postalcode" id="postalcode" placeholder="Code postal" required>
+                <input type="text" name="postalcode" id="postalcode" placeholder="Code postal" ngModel>
             </div>
             <div>
                 <label for="city">Ville*</label>
-                <input type="text" name="city" id="city" placeholder="Ville" required>
+                <input type="text" name="city" id="city" placeholder="Ville" ngModel>
             </div>
             <div>
                 <label for="email">Adresse Mail*</label>
-                <input type="email" name="email" id="email" placeholder="Adresse mail" required>
+                <input type="email" name="email" id="email" placeholder="Adresse mail" ngModel>
             </div>
             <div>
                 <label for="password">Mot de passe*</label>
-                <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" ngModel>
             </div>
             <div>
-                <label for="confirm_password">Mot de passe*</label>
-                <input type="password" name="confirm_password" id="password" placeholder="Confirmer votre mot de passe" required>
+                <label for="confirm_password">Confirmation*</label>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer votre mot de passe" ngModel>
             </div>
 
             <div class="button"> 
@@ -73,24 +75,19 @@
             </h2>
         </div>
         
-        <form action="#" method="post">
+        <form #loginForm="ngForm" (ngSubmit)="onSubmitLogin(loginForm.value)">
 
             <div>
                 <label for="email">Adresse Mail*</label>
-                <input type="email" name="email" id="email" placeholder="Adresse mail" required>
+                <input type="email" name="email" id="email" placeholder="Adresse mail" ngModel>
             </div>
             <div>
                 <label for="password">Mot de passe*</label>
-                <input type="password" name="password" id="password" placeholder="Mot de passe" required>
-            </div>
-            <div>
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Se souvenir de moi</label>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" ngModel>
             </div>
 
             
             <div class="button"> 
-                <p>Mot de passe oublié ?</p>
                 <input type="submit" value="Connexion">
             </div>
 
