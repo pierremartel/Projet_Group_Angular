@@ -14,6 +14,8 @@ iconPlus! : string;
 
 registerError : any = [];
 
+session : any = false;
+
 
   constructor(private http: HttpClient) {}
 
@@ -38,6 +40,7 @@ registerError : any = [];
        console.log(value)
       this.http.post('http://localhost:8000/login', value).subscribe(result => {
         console.log('dataLogin', result);
+        this.session = result;
       //   if(result !== true){
       //     this.registerError = result
       // }

@@ -67,7 +67,7 @@
         <img [src]="icon">
     </div>
 
-    <div class="form-2">
+    <div *ngIf="session === false; else elseBlock"class="form-2">
         <div class="title">
             <img [src]="iconArrow">
             <h2>
@@ -93,4 +93,5 @@
 
         </form> 
     </div>
+    <ng-template #elseBlock>Bienvenue {{session.user.username}} {{session.user.userfirstname}}</ng-template>
 </main>
