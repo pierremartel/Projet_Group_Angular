@@ -12,46 +12,33 @@
     border-radius: 10px;
     font-size: 28px;
     padding: 10px;
-    transform: translate(0, 200px);
+    transform: translate(0, 150px);
     background-color:rgba(226, 226, 112, 0.5);   
+}
+
+.btn{
+    height:50px;
+    width:50px;
+    background-color:rgb(109, 109, 170);
+    cursor:pointer;
+    position:fixed;
+    right:10px;
+    bottom:30px;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon {
+    width:20px;
 }
 
 /* Caroussel--------------------------------------------------------------------------------------- */
 
-.new-product{
-    width:90%;
-    margin:auto;
-    margin-top:50px;
-    box-shadow: 0px -2px 5px rgb(115, 115, 121);
-}
 
-.new-product-title{
-    display:flex;
-    justify-content:space-between;
-    font-size:24px;
-    font-weight: 600;
-    margin:30px 0px;
-}
 
-.new-product-title button {
-    background-color: rgb(223, 60, 60);
-}
 
-.arrow{
-    cursor: pointer;
-}
-.product{
-    margin:5px;
-    width: 280px;
 
-}
+/* Services------------------------------------------------------------------- */
 
-.new-product-button{
-    background-color:rgb(226, 226, 112);
-    border-radius:10px;
-    padding:5px;
-    font-size:20px;
-    font-weight: 500;
-    transform: translate(170px);
-    cursor: pointer;
-}
