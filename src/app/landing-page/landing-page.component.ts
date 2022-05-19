@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { ViewportScroller } from '@angular/common';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 
 @Component({
@@ -8,18 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-
+  @HostListener('window:scroll') 
 banniere! : string;
+icone! : string;
 
 
-  constructor() { }
+
+  constructor(private scroll: ViewportScroller) { }
 
   ngOnInit(): void {
     this.banniere = './assets/photos/banniere.jpg';
-    
-    
-    
+    this.icone = './assets/logo_icon/arrow-p.svg';
     
   }
+
+  onScrollTop() {
+    this.scroll.scrollToPosition([0,0]);
+    
+  }
+
+  
 
 }

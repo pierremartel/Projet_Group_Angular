@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {NgForm} from '@angular/forms';
 
+
 @Component({
   selector: 'app-authentification-customer',
   templateUrl: './authentification-customer.component.html',
@@ -12,6 +13,7 @@ icon! : string;
 iconArrow! : string;
 iconPlus! : string;
 
+
 registerError : any = [];
 
 session : any = false;
@@ -19,11 +21,17 @@ session : any = false;
 
   constructor(private http: HttpClient) {}
 
+  constructor() { }
+ 
+
+
   ngOnInit(): void {
     this.icon = './assets/logo_icon/icons_user.png';
     this.iconArrow = 'assets/logo_icon/arrow-right.svg';
     this.iconPlus = 'assets/logo_icon/plus.svg';
+    
   }
+
 
   onSubmit(value:any) {
     console.log('register')
@@ -49,4 +57,9 @@ session : any = false;
     
   }
 
+
+
+  
+
+}
 

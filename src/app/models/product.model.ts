@@ -3,7 +3,6 @@ export class ListProducts {
     title! : string;
     description? : string;
     imageFileName! : string;
-    imageUrl! : string;
     price! : number;
     region! : string;
 }

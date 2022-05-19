@@ -10,6 +10,7 @@ import { ListProducts } from '../models/product.model';
 export class CardNewproductsComponent implements OnInit {
 
   @Input() product!: ListProducts;
+
   // carrots! : string;
   // pickles! : string;
   // pasta! : string;
@@ -33,5 +34,7 @@ export class CardNewproductsComponent implements OnInit {
     // this.arrow_d = './assets/logo_icon/arrow_droite.png';
     // this.arrow_g = './assets/logo_icon/arrow_gauche.png';
   }
+
+
 
 }

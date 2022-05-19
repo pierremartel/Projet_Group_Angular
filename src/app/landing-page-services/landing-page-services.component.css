@@ -1,5 +1,23 @@
 .services{
     background-color: rgb(193, 167, 167);
-    height:200px;
+    height:250px;
     margin-top :50px;
+    padding-top:50px;
+    display: flex;
+}
+
+.services img {
+    width: 130px;
+    
+}
+
+.services p {
+    margin-top:10px;
+    text-align: center;
+    width:80%;
+}
+
+.services-content{
+    text-align: center;
+    
 }
