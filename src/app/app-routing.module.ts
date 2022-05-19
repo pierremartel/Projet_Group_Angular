@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { PageProductsComponent } from './page-products/page-products.component';
 
 const routes: Routes = [
     { path : '', component: LandingPageComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path : 'produits/ajouter', component :AddProductComponent},
     {path : 'produits/modifier', component :UpdateProductComponent},
     {path : 'produits/supprimer', component :DeleteProductComponent},
+    {path : 'produits', component :PageProductsComponent},
 ];
 
 @NgModule({

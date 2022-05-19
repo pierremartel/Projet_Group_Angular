@@ -20,6 +20,9 @@ import { CardBestsellComponent } from './card-bestsell/card-bestsell.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { PageProductsComponent } from './page-products/page-products.component';
+import { NavPageProductsComponent } from './nav-page-products/nav-page-products.component';
+import { ListPageProductsComponent } from './list-page-products/list-page-products.component';
 
 
 
@@ -39,7 +42,10 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     CardBestsellComponent,
     AddProductComponent,
     DeleteProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    PageProductsComponent,
+    NavPageProductsComponent,
+    ListPageProductsComponent
 
   ],
   imports: [
