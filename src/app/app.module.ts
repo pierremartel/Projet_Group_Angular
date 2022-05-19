@@ -26,9 +26,7 @@ import { CardBestsellComponent } from './card-bestsell/card-bestsell.component';
     HeaderComponent,
     AuthentificationCustomerComponent,
     LandingPageComponent,
-
-    ContactComponent
-
+    ContactComponent,
     FooterComponent,
     LandingPageNewproductsComponent,
     LandingPageServicesComponent,
