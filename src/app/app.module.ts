@@ -8,7 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthentificationCustomerComponent } from './authentification-customer/authentification-customer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { PromottionComponent } from './promottion/promottion.component';
+import { PromotionComponent } from './promotion/promotion.component';
 
 import { ContactComponent } from './contact/contact.component';
 
@@ -34,7 +34,7 @@ import { ListPageProductsComponent } from './list-page-products/list-page-produc
     HeaderComponent,
     AuthentificationCustomerComponent,
     LandingPageComponent,
-    PromottionComponent,
+    PromotionComponent,
     ContactComponent,
     FooterComponent,
     LandingPageNewproductsComponent,

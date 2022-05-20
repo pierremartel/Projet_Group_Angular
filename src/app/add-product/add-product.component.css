@@ -1,0 +1,89 @@
+main{
+    width:90%;
+    margin:auto;
+    background-color: #fef1df;
+    padding: 30px;
+    margin-bottom:50px;
+}
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size:24px;
+}
+
+.separation {
+    height: 1px;
+    background-color: #747cdf;
+    margin-bottom: 40px;
+    
+}
+.form{
+    width:35%;
+    margin:auto;
+    position: relative;
+}
+
+.form-content{
+    display:flex;
+    justify-content:space-between;
+    margin:10px;
+    font-size:18px;
+}
+
+.file-image{
+    font-size:12px;
+    width:60%;
+}
+
+input{
+    border: 1px solid;
+    border-radius: 5px;
+    outline-color: #747cdf;
+    font-size:18px;
+}
+
+#btn {
+    background-color:rgb(226, 226, 112);
+    padding:3px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position:absolute;
+    right:20px;
+    font-weight: 700;
+}
+
+select {
+    border: 1px solid;
+    width: 60%;
+    margin-left:auto;
+}
+
+textarea {
+    outline-color: #747cdf;
+}
+
+
+@media screen and (max-width: 920px) {
+    .form-content,  textarea, input {
+        margin-left: 0px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size:18px;
+    }
+
+    .form{
+        width:100%;
+    }
+
+
+    .file-image{
+        font-size:15px;
+        width:100%;
+    }
+
+    select {
+        width: 100%;
+    }
+    
+}
