@@ -21,7 +21,7 @@ session : any = false;
 
   constructor(private http: HttpClient) {}
 
-  constructor() { }
+  
  
 
 
@@ -61,5 +61,5 @@ session : any = false;
 
   
 
-}
+
 
