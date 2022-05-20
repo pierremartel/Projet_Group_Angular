@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageProductsComponent implements OnInit {
  
+
   plus! : string ;
   constructor() { }
 
   ngOnInit(): void {
     
     this.plus = './assets/logo_icon/plus.svg';
+
   }
+
+  
 
 }

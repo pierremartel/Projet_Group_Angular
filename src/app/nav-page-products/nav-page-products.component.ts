@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavPageProductsComponent implements OnInit {
 
+
   meat! :string ;
   fish! :string ;
   drink! :string ;
@@ -23,4 +24,5 @@ export class NavPageProductsComponent implements OnInit {
     this.vegetable = './assets/photos/legume.png'
   }
 
+  
 }
