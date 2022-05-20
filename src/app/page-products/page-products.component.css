@@ -63,6 +63,7 @@ img {
 .product-icon{
     margin : 5px 0;
     display: flex;
+    cursor: pointer;
 }
 
 i{

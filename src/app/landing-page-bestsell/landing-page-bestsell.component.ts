@@ -19,6 +19,8 @@ export class LandingPageBestsellComponent implements OnInit {
       this.arrow_g = './assets/logo_icon/arrow_gauche.png';
       this.arrow_d = './assets/logo_icon/arrow_droite.png';
 
+      
+
     }
   
   }

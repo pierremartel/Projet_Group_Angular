@@ -5,6 +5,7 @@
     margin:auto;
     margin-top:50px;
     box-shadow: 0px -2px 5px rgb(115, 115, 121);
+    position:relative;
     
 }
 
@@ -24,11 +25,22 @@
 }
 
 .card{
+    /* width:90%; */
     display:flex;
+    overflow: hidden;
+    
     
 }
-.arrow{
+.arrowg{
     height:50px;
     cursor: pointer;
-    transform:translate(0, 80px);
+    transform:translate(0, 120px);
 }
+.arrowd{
+    height:50px;
+    cursor: pointer;
+    transform:translate(0, 120px);
+    position: absolute;
+    right:0;
+}
+
