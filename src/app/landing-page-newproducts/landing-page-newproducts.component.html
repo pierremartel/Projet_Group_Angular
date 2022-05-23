@@ -1,12 +1,12 @@
 <section class="new-product">
   <div class="new-product-title">
     <h2>Nos nouveaux arrivage</h2>
-    <button>Plus de produits</button>
+    <button (click)="onShowProducts()">Plus de produits</button>
   </div>
   <img class="arrowg" [src]="arrow_g" alt="" />
   <img class="arrowd" [src]="arrow_d" alt="" />
   <div class="card">
-
+    
     <app-card-newproducts
       *ngFor="let product of newProducts"
       [product]="product"

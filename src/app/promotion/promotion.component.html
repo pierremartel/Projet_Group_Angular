@@ -1,241 +1,136 @@
+<app-nav-page-products></app-nav-page-products>
 
-
-
-
-
-
-
-
-<div class="container ">
+<div class="title">
+    <!-- FILE ARIANE------------------------------------------------ -->
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a routerLink="">Accueil</a></li>
+            <li><span aria-current="page">Promotion</span></li>
+        </ul>
+    </nav>
     
-    <div>
-        <h1> nombre de produits </h1>
-    </div>  
-    
-    <div class="cards">
-        <div class="card"> 
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag1.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-        </div>
-        
-        
-        
-        
-        <div class="card"> 
-            
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag2.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-            
-            
-            
-        </div>
-        
-        
-        
-        <div class="card"> 
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag3.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-        </div>
-        
-        
-        
-        <div class="card"> 
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag4.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-            
-        </div>
-        
-        
-        <div class="card"> 
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag5.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-            
-        </div>
-        
-        
-        <div class="card"> 
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag6.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-            
-        </div>
-        
-        
-        <div class="card"> 
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag7.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-            
-        </div>
-        
-        
-        <div class="card"> 
-            
-            <div class="photo">
-                
-                <img src= "./assets/photos/imag8.jpg" alt="">
-                
-            </div>
-            
-            <div class="titre">
-                
-                <h2>titre</h2>
-                <p>  prix  </p>
-                <p> Hauts-de-France </p>
-            </div>
-            
-            
-            
-            
-            <form>
-                <input type="number" name="" id="" class="Compteur">
-                <input type="submit" value="ajouter" > 
-                
-            </form>
-        </div>
-        
-        
-        
-        
-        
-        
-    </div>
-    
-    
-    
+    <!-- FILE ARIANE------------------------------------------------ -->
+    <button (click)="onAddProduct()">Ajouter produit</button><i class="fa-solid fa-plus"></i>
+    <button (click)="onUpdateProduct()">Modifier produit</button ><i class="fa-solid fa-pen-to-square"></i>
+    <button (click)="onDeleteProduct()">Supprimer produit</button><i class="fa-solid fa-trash-can"></i>    
 </div>
 
 
 
+
+
+<main class="main">
+    <section class="new-product">
+    
+    <div class="card">
+  
+      <app-card-newproducts
+        *ngFor="let product of newProducts"
+        [product]="product"
+      ></app-card-newproducts>
+  
+    </div>
+  </section>
+     <div class="content">
+      <!--  <div class="product">
+            <a routerlink=""><img src="./assets/photos/produit_5.jpg" alt=""></a>
+            <span><img (click)="onShowProduct()" src="./assets/logo_icon/infos.svg" alt=""></span>
+            <h2 class="product-title">Pâtes</h2>
+            <p class="product-price">5€</p>
+            <div class="product-icon">
+                <p>supprimer</p>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="product-icon">   
+                <p (click)="onUpdate()">Modifier</p>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <button class="btn-buy">Acheter</button>
+        </div>
+        <div class="product">
+            <a routerlink=""><img src="./assets/photos/produit_1.jpg" alt=""></a>
+            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
+            <h2 class="product-title">Cornichons</h2>
+            <p class="product-price">8€</p>
+            <div class="product-icon">
+                <p>supprimer</p>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="product-icon">   
+                <p>Modifier</p>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <button class="btn-buy">Acheter</button>
+        </div>
+        <div class="product">
+            <a routerlink=""><img src="./assets/photos/produit_2.jpg" alt=""></a>
+            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
+            <h2 class="product-title">Carrotes</h2>
+            <p class="product-price">8€</p>
+            <div class="product-icon">
+                <p>supprimer</p>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="product-icon">   
+                <p>Modifier</p>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <button class="btn-buy">Acheter</button>
+        </div>
+        <div class="product">
+            <a routerlink=""><img src="./assets/photos/produit_4.jpg" alt=""></a>
+            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
+            <h2 class="product-title">Clementine</h2>
+            <p class="product-price">8€</p>
+            <div class="product-icon">
+                <p>supprimer</p>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="product-icon">   
+                <p>Modifier</p>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <button class="btn-buy">Acheter</button>
+        </div>
+        <div class="product">
+            <a routerlink=""><img src="./assets/photos/produit_6.jpg" alt=""></a>
+            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
+            <h2 class="product-title">Saucisse chipolatat</h2>
+            <p class="product-price">8€</p>
+            <div class="product-icon">
+                <p>supprimer</p>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="product-icon">   
+                <p>Modifier</p>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <button class="btn-buy">Acheter</button>
+        </div>
+        <div class="product">
+            <a routerlink=""><img src="./assets/photos/produit_3.jpg" alt=""></a>
+            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
+            <h2 class="product-title">Pâtes aux blé complet</h2>
+            <p class="product-price">8€</p>
+            <div class="product-icon">
+                <p>supprimer</p>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="product-icon">   
+                <p>Modifier</p>
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <button class="btn-buy">Acheter</button>
+        </div>-->
+        
+        
+    </div> 
+
+    <div class="number-of-page">
+        <i class="fa-solid fa-angles-left"></i>
+        <p>Pages</p>
+        <i class="fa-solid fa-angles-right"></i>
+    </div>
+    
+
+</main>

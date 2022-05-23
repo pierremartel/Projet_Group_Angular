@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class LandingPageNewproductsComponent implements OnInit {
   arrow_d! : string;
 
   
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private router: Router) { }
 
     newProducts = [];
   
@@ -34,6 +35,10 @@ export class LandingPageNewproductsComponent implements OnInit {
 
       // this.products = this.listproductservice.getAllProducts();
      
+    }
+
+    onShowProducts():void {
+      this.router.navigateByUrl('promotion')
     }
 
 }

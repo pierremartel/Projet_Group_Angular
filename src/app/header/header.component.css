@@ -17,14 +17,14 @@
     list-style: none;
 }
 
+li, i{
+ cursor: pointer;   
+}
+
 .nav-secondaire a{
     text-decoration: none;
     margin: 15px 10px 0 30px;
     color:white;
-}
-
-.nav-secondaire img {
-    width:20px;
 }
 
 #service {
@@ -48,6 +48,7 @@
 
 #logo{
     width: 15%;
+    cursor: pointer;
 }
 
 #carte{

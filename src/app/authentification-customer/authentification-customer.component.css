@@ -15,12 +15,20 @@
 /* Fil d'ariana ------------------------------------------------------- */
 
 
+.error-message {
+    width:80%;
+    height:50px;
+    margin:auto;
+    border: 1px solid red;
+    display:none;
+}
+
 .main {
     background-color: rgba(89, 126, 85, 0.4);
     margin:auto;
     margin-top:50px;
     width:100%;
-    height:550px;
+    height:580px;
     display:flex;
     justify-content:center;
     /* border: 1px solid; */
