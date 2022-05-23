@@ -1,17 +1,14 @@
 <div class="new-product-picture">
-  <!-- <img class="arrow" [src]="arrow_g" alt="" > -->
   <div class="product-content">
-    <img
-      class="product-image"
-      [src]=product.imageFileName
-      alt="product.title"
-    />
+    
+    <img class="product-image" [src]=product.imageFileName alt="product.title" />
+    <!-- <img class="infos" (click)="onShowProduct()" src="./assets/logo_icon/infos.svg" alt=""> -->
     <h2>{{ product.title }}</h2>
     <p>{{ product.price }}€</p>
+    
     <button class="new-product-button">
-      Ajouter au panier
+      Ajouter <i class="fa-solid fa-cart-arrow-down"></i>
     </button>
   </div>
 </div>
-
 

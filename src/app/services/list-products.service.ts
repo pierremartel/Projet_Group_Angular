@@ -8,39 +8,51 @@ import { ListProducts } from '../models/product.model';
 export class ListProductsService {
     listProducts : ListProducts[] = [
           {
-            imageFileName: './assets/photos/clementine.jpg',
+            id: 1,
+            imageFileName: './assets/photos/produit_1.jpg',
+            title: 'Carrottes',
+            description: 'lorem10loremlorlemlorlemlorlemlormeloremlor',
+            price: 2,
+            region: 'Haut-de-france'
+        },
+        {
+            id: 2,
+            imageFileName: './assets/photos/produit_2.jpg',
             title: 'Clementine',
+            description: 'lorem10loremlorlemlorlemlorlemlormeloremlor',
             price: 2,
             region: 'Haut-de-france'
         },
         {
-            imageFileName: './assets/photos/carotes.jpg',
-            title: 'Carottes',
-            price: 2,
-            region: 'Haut-de-france'
-        },
-        {
-            imageFileName: './assets/photos/Filets_de_poitrine_de_poulet_crus.jpg',
+            id: 3,
+            imageFileName: './assets/photos/produit_3.jpg',
             title: 'Poulets',
+            description: 'lorem10loremlorlemlorlemlorlemlormeloremlor',
             price: 2,
             region: 'Haut-de-france'
         },
         {
-            imageFileName: './assets/photos/Saucisse_crue.jpg',
+            id: 4,
+            imageFileName: './assets/photos/produit_4.jpg',
             title: 'Saucisses',
+            description: 'lorem10loremlorlemlorlemlorlemlormeloremlor',
             price: 2,
             region: 'Haut-de-france'
         }  , 
-
-        // {
-        //     imageUrl: './assets/photos/Saucisse_crue.jpg',
-        //     title: 'Saucisses',
-        //     price: 2,
-        //     region: 'Haut-de-france'
-        // }   
+ 
         {
-            imageFileName: './assets/photos/Saucisse_crue.jpg',
-            title: 'Saucisses',
+            id: 5,
+            imageFileName: './assets/photos/produit_5.jpg',
+            title: 'Pâtes',
+            description: 'lorem10loremlorlemlorlemlorlemlormeloremlor',
+            price: 2,
+            region: 'Haut-de-france'
+        } ,  
+        {
+            id: 6,
+            imageFileName: './assets/photos/produit_6.jpg',
+            title: 'Cornichons',
+            description: 'lorem10loremlorlemlorlemlorlemlormeloremlor',
             price: 2,
             region: 'Haut-de-france'
         }   

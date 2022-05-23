@@ -27,6 +27,7 @@ import { NavPageProductsComponent } from './nav-page-products/nav-page-products.
 import { SinglePageProductsComponent } from './single-page-products/single-page-products.component';
 import { ShopComponent } from './shop/shop.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AcknowledgementPageComponent } from './acknowledgement-page/acknowledgement-page.component';
 
 
 
@@ -52,7 +53,8 @@ import { PaymentComponent } from './payment/payment.component';
     NavPageProductsComponent,
     SinglePageProductsComponent,
     ShopComponent,
-    PaymentComponent
+    PaymentComponent,
+    AcknowledgementPageComponent
 
 
   ],
@@ -61,6 +63,7 @@ import { PaymentComponent } from './payment/payment.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,14 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./page-products.component.css']
 })
 export class PageProductsComponent implements OnInit {
- 
-
-  plus! : string ;
+  // image="";
+  // title="";
+  // price="";
+  
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     
-    this.plus = './assets/logo_icon/plus.svg';
 
   }
 
@@ -30,6 +30,12 @@ export class PageProductsComponent implements OnInit {
     this.router.navigateByUrl('produits/id')
   }
 
+  // parentProducts(data:any) {
+  //   console.warn(data)
+  //   this.image=data.image;
+  //   this.title=data.title;
+  //   this.price=data.price;
+  // }
   
 
 }

@@ -11,10 +11,17 @@ export class PaymentComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   onBackTo(): void {
     this.router.navigateByUrl('panier');
+  }
+
+
+
+  onPurchaseTo(): void {
+    this.router.navigateByUrl('purchase');
   }
 
 }

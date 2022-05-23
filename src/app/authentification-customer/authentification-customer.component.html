@@ -13,10 +13,13 @@
 
 
 
+
 <main class="main">
+    
     <div class="form-1">
+        <div class="error-message"></div>
         <div class="title">
-            <img [src]="iconPlus">
+            <i class="fa-solid fa-plus fa-3x"></i>
             <h2>
                 Pas encore de compte?<br> <span>Inscrivez-vous</span>
             </h2>
@@ -68,8 +71,9 @@
     </div>
 
     <div *ngIf="session === false; else elseBlock"class="form-2">
+        <div class="error-message"></div>
         <div class="title">
-            <img [src]="iconArrow">
+            <i class="fa-solid fa-arrow-right fa-3x"></i>
             <h2>
                 Déjà inscrit?<br> <span>Identifiez-vous</span>
             </h2>
