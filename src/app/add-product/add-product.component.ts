@@ -9,7 +9,8 @@ import {NgForm} from '@angular/forms';
 })
 export class AddProductComponent implements OnInit {
 
-  file: File | null = null;
+  // file: File | null = null;
+  file!: File;
 
   constructor(private http: HttpClient) { }
 
@@ -23,28 +24,46 @@ export class AddProductComponent implements OnInit {
         console.log(event)
 
         this.file = <File>event.target.files[0];
+
+        console.log(this.file.name)
         
-        let formData = new FormData();
+        // let formData = new FormData();
         
-        formData.append("image", this.file);
+        // formData.append("image", this.file);
 
         // console.log(this.file)
 
-        this.http.post('http://localhost:8000/admin/product/create', formData).subscribe(result => {
+        // this.http.post('http://localhost:8000/admin/product/create', formData).subscribe(result => {
             
-        console.log('addProduct', result);
+        // console.log('addProduct', result);
 
             // const upload$ = this.http.post("/api/thumbnail-upload", formData);
 
             // upload$.subscribe();
-        })
+        // })
       
     }
 
   onSubmitAddP(value:any) {
-    console.log('addP', value);
+    console.log('addP', value.title);
+
+    let formData = new FormData();
+
+    formData.append("image", this.file, this.file.name);
+
+    // formData.append("imageName", this.file.name);
+
+    formData.append("title", value.title);
+
+    formData.append("category", value.category);
+
+    formData.append("price", value.price);
+
+    formData.append("content", value.content);
+
+    console.log('formdata', formData);
     
-        this.http.post('http://localhost:8000/admin/product/create', value).subscribe(result => {
+        this.http.post('http://localhost:8000/admin/product/create', formData).subscribe(result => {
         console.log('addProduct', result);
     })}
 
