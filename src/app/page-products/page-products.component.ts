@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-page-products',
@@ -11,10 +12,23 @@ export class PageProductsComponent implements OnInit {
   // title="";
   // price="";
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
+
+  products = [];
 
   ngOnInit(): void {
     
+
+    this.http.get<any>('http://localhost:8000/products').subscribe(data => {
+
+      for (let i = 0; i < data.length; i++){
+       data[i].imageFileName = 'http://localhost:8000/uploads/images/products/' + data[i].imageFileName
+      }
+          console.log(data);
+          this.products = data
+           })
+
+
   }
 
   onAddProduct(): void {
