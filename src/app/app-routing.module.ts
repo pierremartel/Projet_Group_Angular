@@ -28,7 +28,7 @@ const routes: Routes = [
     { path : 'produits/supprimer', component :DeleteProductComponent},
     { path : 'produits', component :PageProductsComponent},
     { path : 'promotion', component:PromotionComponent},
-    { path : 'produits/id', component:SinglePageProductsComponent},
+    { path : 'produits/:id', component:SinglePageProductsComponent},
     { path : 'mention-legales', component:LegalNoticeComponent},
     { path : 'conditions-generales-de-vente', component:CgvComponent},
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-list-page-products',
+  selector: 'app-single-page-products',
   templateUrl: './single-page-products.component.html',
   styleUrls: ['./single-page-products.component.css']
 })

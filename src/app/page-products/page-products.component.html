@@ -1,8 +1,7 @@
 <app-nav-page-products ></app-nav-page-products>
-<!-- (parentProducts)="parentProducts($event)" -->
+<!-- Chil component nav-------------------------------------------------------------------------- -->
 
 <div class="title">
-    <!-- FILE ARIANE------------------------------------------------ -->
     <nav aria-label="Breadcrumb" class="breadcrumb">
         <ul>
             <li><a routerLink="">Accueil</a></li>
@@ -10,112 +9,20 @@
         </ul>
     </nav>
     
-    <!-- FILE ARIANE------------------------------------------------ -->
+<!-- FILE ARIANE------------------------------------------------------------------------------------- -->
+
     <button (click)="onAddProduct()">Ajouter produit</button><i class="fa-solid fa-plus"></i>
+    <button (click)="onUpdateProduct()">Modifier produit</button ><i class="fa-solid fa-pen-to-square"></i>
+    <button (click)="onDeleteProduct()">Supprimer produit</button><i class="fa-solid fa-trash-can"></i> 
 </div>
 
+<!-- Child Component list products------------------------------------------------------------------- -->
 <main class="main">
-    <div class="content">
-        <div class="product">
-            <a routerlink=""><img src="./assets/photos/produit_1.jpg" alt=""></a>
-            <span><img (click)="onShowProduct()" src="./assets/logo_icon/infos.svg" alt=""></span>
-            <h2 class="product-title">Carrotes </h2>
-            <p class="product-price">3€</p>
-            <div class="product-icon">
-                <p>supprimer</p>
-                <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="product-icon">   
-                <p (click)="onUpdate()">Modifier</p>
-                <i class="fa-solid fa-pen-to-square"></i>
-            </div>
-            <button class="btn-buy">Acheter</button>
-        </div>
-        <div class="product">
-            <a routerlink=""><img src="./assets/photos/produit_2.jpg" alt=""></a>
-            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
-            <h2 class="product-title">Cornichons</h2>
-            <p class="product-price">8€</p>
-            <div class="product-icon">
-                <p>supprimer</p>
-                <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="product-icon">   
-                <p>Modifier</p>
-                <i class="fa-solid fa-pen-to-square"></i>
-            </div>
-            <button class="btn-buy">Acheter</button>
-        </div>
-        <div class="product">
-            <a routerlink=""><img src="./assets/photos/produit_3.jpg" alt=""></a>
-            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
-            <h2 class="product-title">Carrotes</h2>
-            <p class="product-price">8€</p>
-            <div class="product-icon">
-                <p>supprimer</p>
-                <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="product-icon">   
-                <p>Modifier</p>
-                <i class="fa-solid fa-pen-to-square"></i>
-            </div>
-            <button class="btn-buy">Acheter</button>
-        </div>
-        <div class="product">
-            <a routerlink=""><img src="./assets/photos/produit_4.jpg" alt=""></a>
-            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
-            <h2 class="product-title">Clementine</h2>
-            <p class="product-price">8€</p>
-            <div class="product-icon">
-                <p>supprimer</p>
-                <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="product-icon">   
-                <p>Modifier</p>
-                <i class="fa-solid fa-pen-to-square"></i>
-            </div>
-            <button class="btn-buy">Acheter</button>
-        </div>
-        <div class="product">
-            <a routerlink=""><img src="./assets/photos/produit_5.jpg" alt=""></a>
-            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
-            <h2 class="product-title">Saucisse chipolatat</h2>
-            <p class="product-price">8€</p>
-            <div class="product-icon">
-                <p>supprimer</p>
-                <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="product-icon">   
-                <p>Modifier</p>
-                <i class="fa-solid fa-pen-to-square"></i>
-            </div>
-            <button class="btn-buy">Acheter</button>
-        </div>
-        <div class="product">
-            <a routerlink=""><img src="./assets/photos/produit_6.jpg" alt=""></a>
-            <span><img src="./assets/logo_icon/infos.svg" alt=""></span>
-            <h2 class="product-title">Pâtes aux blé complet</h2>
-            <p class="product-price">8€</p>
-            <div class="product-icon">
-                <p>supprimer</p>
-                <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="product-icon">   
-                <p>Modifier</p>
-                <i class="fa-solid fa-pen-to-square"></i>
-            </div>
-            <button class="btn-buy">Acheter</button>
-        </div>
-        
-        
-    </div>
-
-    <div class="number-of-page">
+    <app-list-page-products *ngFor="let product of products" [product]="product"></app-list-page-products>
+    <!-- <div class="number-of-page">
         <i class="fa-solid fa-angles-left"></i>
         <p>Pages</p>
         <i class="fa-solid fa-angles-right"></i>
-    </div>
-    
-
+    </div> -->
 </main>
 

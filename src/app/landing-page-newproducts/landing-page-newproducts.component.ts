@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing-page-newproducts.component.css']
 })
 export class LandingPageNewproductsComponent implements OnInit {
-  // products! : ListProducts[];
   arrow_g! : string;
   arrow_d! : string;
 
@@ -32,8 +31,6 @@ export class LandingPageNewproductsComponent implements OnInit {
           this.newProducts = data
            })
 
-
-      // this.products = this.listproductservice.getAllProducts();
      
     }
 
