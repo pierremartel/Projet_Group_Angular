@@ -72,8 +72,9 @@ form .box {
     height: 72%;
 }
 
-.foot_form button:hover {
+.foot_form input:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 920px) {

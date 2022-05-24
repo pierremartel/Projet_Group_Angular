@@ -13,6 +13,9 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { PageProductsComponent } from './page-products/page-products.component';
 import { SinglePageProductsComponent } from './single-page-products/single-page-products.component';
 
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { CgvComponent } from './cgv/cgv.component';
+
 const routes: Routes = [
     { path : '', component: LandingPageComponent },
     { path: 'authenticate', component: AuthentificationCustomerComponent },
@@ -26,6 +29,8 @@ const routes: Routes = [
     { path : 'produits', component :PageProductsComponent},
     { path : 'promotion', component:PromotionComponent},
     { path : 'produits/id', component:SinglePageProductsComponent},
+    { path : 'mention-legales', component:LegalNoticeComponent},
+    { path : 'conditions-generales-de-vente', component:CgvComponent},
 
 ];
 

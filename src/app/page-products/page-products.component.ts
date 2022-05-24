@@ -18,6 +18,7 @@ export class PageProductsComponent implements OnInit {
 
   ngOnInit(): void {
     
+
     this.http.get<any>('http://localhost:8000/products').subscribe(data => {
 
       for (let i = 0; i < data.length; i++){
@@ -26,6 +27,7 @@ export class PageProductsComponent implements OnInit {
           console.log(data);
           this.products = data
            })
+
 
   }
 

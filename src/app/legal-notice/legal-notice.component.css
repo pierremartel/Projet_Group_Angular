@@ -1,0 +1,25 @@
+.main-content {
+    width:90%;
+    margin: auto;
+    padding-top: 15px;;
+}
+
+h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size:28px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-weight:700;
+    margin-bottom: 10px;
+}
+
+span {
+    text-transform: uppercase;
+}
+
+div {
+    margin-top:10px;
+}
