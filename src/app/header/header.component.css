@@ -17,14 +17,14 @@
     list-style: none;
 }
 
+li, i{
+ cursor: pointer;   
+}
+
 .nav-secondaire a{
     text-decoration: none;
     margin: 15px 10px 0 30px;
     color:white;
-}
-
-.nav-secondaire img {
-    width:20px;
 }
 
 #service {
@@ -39,15 +39,16 @@
 /* Header ------------------------------------------------------------ */
 
 .header{
+    height:140px;
     font-size:20px;
     background-color:white;
     display:flex;
     justify-content:space-between;
-    margin-bottom:15px; 
 }
 
 #logo{
     width: 15%;
+    cursor: pointer;
 }
 
 #carte{
@@ -107,8 +108,7 @@
 
 .nav-principal li {
     list-style: none;
-    margin:0 40px;
-    margin-top:15px;
+    margin:15px 40px 0 40px;
 }
 
 .nav-principal a {
@@ -117,7 +117,12 @@
     font-size: 18px;
 }
 
-.active {
-    background-color:rgb(196, 179, 179);
-    text-decoration: underline;
+.nav-principal .active {
+    text-decoration:underline;
+    background-color:rgb(177, 206, 96);
+    padding:15px;
+}
+
+a:hover {
+    background-color:rgb(177, 206, 96);
 }

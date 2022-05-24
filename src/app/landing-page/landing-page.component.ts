@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,10 +15,10 @@ icone! : string;
 
 
 
-  constructor(private scroll: ViewportScroller) { }
+  constructor(private scroll: ViewportScroller, private router:Router) { }
 
   ngOnInit(): void {
-    this.banniere = './assets/photos/banniere.jpg';
+    this.banniere = './assets/photos/banniere2.jpg';
     this.icone = './assets/logo_icon/arrow-p.svg';
     
   }
@@ -25,6 +26,10 @@ icone! : string;
   onScrollTop() {
     this.scroll.scrollToPosition([0,0]);
     
+  }
+
+  onShowProducts(): void {
+    this.router.navigateByUrl('produits');
   }
 
   

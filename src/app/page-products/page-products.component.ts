@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-products',
@@ -6,13 +7,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-products.component.css']
 })
 export class PageProductsComponent implements OnInit {
- 
-  plus! : string ;
-  constructor() { }
+  // image="";
+  // title="";
+  // price="";
+  
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     
-    this.plus = './assets/logo_icon/plus.svg';
+
   }
+
+  onAddProduct(): void {
+    this.router.navigateByUrl('produits/ajouter')
+  }
+
+  onUpdate(): void {
+    this.router.navigateByUrl('produits/modifier')
+  }
+
+  onShowProduct(): void {
+    this.router.navigateByUrl('produits/id')
+  }
+
+  // parentProducts(data:any) {
+  //   console.warn(data)
+  //   this.image=data.image;
+  //   this.title=data.title;
+  //   this.price=data.price;
+  // }
+  
 
 }

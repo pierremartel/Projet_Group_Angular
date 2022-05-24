@@ -1,7 +1,7 @@
 export class ListProducts {
-    id? : number;
+    id! : number;
     title! : string;
-    description? : string;
+    description! : string;
     imageFileName! : string;
     price! : number;
     region! : string;

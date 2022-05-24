@@ -24,7 +24,10 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { PageProductsComponent } from './page-products/page-products.component';
 import { NavPageProductsComponent } from './nav-page-products/nav-page-products.component';
-import { ListPageProductsComponent } from './list-page-products/list-page-products.component';
+import { SinglePageProductsComponent } from './single-page-products/single-page-products.component';
+import { ShopComponent } from './shop/shop.component';
+import { PaymentComponent } from './payment/payment.component';
+import { AcknowledgementPageComponent } from './acknowledgement-page/acknowledgement-page.component';
 
 
 
@@ -48,7 +51,10 @@ import { ListPageProductsComponent } from './list-page-products/list-page-produc
     UpdateProductComponent,
     PageProductsComponent,
     NavPageProductsComponent,
-    ListPageProductsComponent
+    SinglePageProductsComponent,
+    ShopComponent,
+    PaymentComponent,
+    AcknowledgementPageComponent
 
 
   ],
@@ -57,6 +63,7 @@ import { ListPageProductsComponent } from './list-page-products/list-page-produc
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

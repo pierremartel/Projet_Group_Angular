@@ -1,5 +1,5 @@
 <div [ngStyle]="{ background : 'url(' + banniere + ')' }" class="banniere">
-    <button>Découvrir notre catalogue</button>
+    <button (click)="onShowProducts()">Découvrir notre catalogue</button>
 </div>
 
 <div class="btn" (click)="onScrollTop()" >
@@ -15,10 +15,10 @@
 <app-landing-page-bestsell></app-landing-page-bestsell>
 
 
-<!-- Les Services ----------------------------------------------------------------------->
+<!-- Services ----------------------------------------------------------------------->
 
 <app-landing-page-services></app-landing-page-services>
 
-<!-- Les commentaires----------------------------------------------------------------- -->
+<!-- Comments----------------------------------------------------------------- -->
 
 <app-landing-page-comments></app-landing-page-comments>

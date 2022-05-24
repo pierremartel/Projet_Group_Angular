@@ -1,0 +1,124 @@
+/* Fil d'ariana ------------------------------------------------------- */
+
+.breadcrumb ul {
+    display: flex;
+    margin:20px 0 0 20px;
+    color: grey;
+    text-transform: uppercase;
+}
+    
+.breadcrumb li::before {
+    content: "→";
+}
+    
+.breadcrumb li:first-child::before {
+    content: "";
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: grey;
+}
+
+/* Fil d'ariana ------------------------------------------------------- */
+
+
+.main {
+    width:90%;
+    height:auto;
+    margin:auto;
+    margin-top:60px;
+    border:1px solid;
+    
+}
+
+.title, .content, .count {
+    display:flex;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight:700;
+    font-size: 28px;
+}
+h2{
+    font-size:20px;
+    font-weight:600px;
+}
+p{
+    font-size:18px;
+}
+
+.title {
+    margin-bottom:15px;
+    background-color:grey;
+    height:70px;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+
+img {
+    width:150px;
+}
+
+.fa-solid {
+    cursor: pointer;
+}
+
+.content {
+    margin-top:20px;
+    justify-content:space-around;
+    align-items: center;
+    
+}
+
+.count {
+    margin:50px 0 90px 10px;
+    background-color:blue;
+    position: relative;
+}
+
+.count-content {
+    position: absolute;
+    right:180px;
+    font-size:24px;
+}
+
+
+.payment-mode{
+    width:95%;
+    height:auto;
+    margin: auto; 
+    margin-top:60px;
+    padding: 10px;
+    background-color: rgb(172, 208, 176);
+    justify-content:space-around;
+    border-radius:10px;
+    border:1px solid green;
+
+}
+
+.payment-service{
+    margin:20px;
+}
+
+.btn {
+    width: 20%;
+    margin: auto;
+    padding: 30px;
+    font-size: 20px;
+    font-weight:700;
+    
+}
+.btn button {
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+button:hover{
+    background-color:green;
+}
