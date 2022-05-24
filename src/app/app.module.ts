@@ -28,6 +28,8 @@ import { SinglePageProductsComponent } from './single-page-products/single-page-
 import { ShopComponent } from './shop/shop.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AcknowledgementPageComponent } from './acknowledgement-page/acknowledgement-page.component';
+import { CgvComponent } from './cgv/cgv.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 
 
@@ -54,7 +56,9 @@ import { AcknowledgementPageComponent } from './acknowledgement-page/acknowledge
     SinglePageProductsComponent,
     ShopComponent,
     PaymentComponent,
-    AcknowledgementPageComponent
+    AcknowledgementPageComponent,
+    CgvComponent,
+    LegalNoticeComponent
 
 
   ],

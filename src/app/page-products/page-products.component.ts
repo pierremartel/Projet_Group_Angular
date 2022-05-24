@@ -15,7 +15,6 @@ export class PageProductsComponent implements OnInit {
 
   ngOnInit(): void {
     
-
   }
 
   onAddProduct(): void {
