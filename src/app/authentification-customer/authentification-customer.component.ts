@@ -49,9 +49,15 @@ session : any = false;
       this.http.post('http://localhost:8000/login', value).subscribe(result => {
         console.log('dataLogin', result);
         this.session = result;
-      //   if(result !== true){
-      //     this.registerError = result
-      // }
+        sessionStorage.setItem('name', this.session.user.username);
+        sessionStorage.setItem('firstname', this.session.user.userfirstname);
+        sessionStorage.setItem('email', this.session.user.email);
+        sessionStorage.setItem('address', this.session.user.address);
+        sessionStorage.setItem('postalcode', this.session.user.postalcode);
+        sessionStorage.setItem('city', this.session.user.city);
+        sessionStorage.setItem('role', this.session.user.roles);
+        sessionStorage.setItem('id', this.session.user.id);
+
     })
     }
     
