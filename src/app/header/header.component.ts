@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   logo! : string;
   search! : string;
   map! : string;
+  userEmail! : string | null;
 
   constructor() { }
 
@@ -18,6 +19,6 @@ export class HeaderComponent implements OnInit {
     this.logo = './assets/logo_icon/logo.png';
     this.search = './assets/logo_icon/search.svg';
     this.map = './assets/logo_icon/carte.png';
+    this.userEmail = sessionStorage.getItem('email');
+    }
   }
-
-}
