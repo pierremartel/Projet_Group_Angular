@@ -1,5 +1,5 @@
 
-<form>
+<form #contactForm="ngForm" (ngSubmit)="onSubmitContact(contactForm.value)">
 
     <h1 class="title">Contactez-nous</h1>
 
@@ -8,32 +8,32 @@
     <div class="body-form">
         <div class="left">
             <div class="box">
-                <label for="firstName">Votre Prénom:</label>
-                <input type="text">
+                <label for="username">Votre Prénom:</label>
+                <input type="text" name="username" ngModel>
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="box">
                 <label for="email">Votre Adresse e-mail:</label>
-                <input type="text">
+                <input type="text" name="email"ngModel>
                 <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="box">
                 <label for="phone">Votre Téléphone:</label>
-                <input type="text">
+                <input type="text" name="phone" ngModel>
                 <i class="fa-solid fa-mobile"></i>
             </div>
         </div>
 
         <div class="right">
             <div class="box">
-                <label for="Message">Votre Message</label>
-                <textarea placeholder="Saisissez ici..."></textarea>
+                <label for="message">Votre Message</label>
+                <textarea name="message" placeholder="Saisissez ici..." ngModel></textarea>
             </div>
         </div>
     </div>
 
     <div class="foot_form" align="center">
-        <button>Envoyer le message</button>
+        <input type="submit" value="Envoyer le message">   
     </div>
 
 </form>
