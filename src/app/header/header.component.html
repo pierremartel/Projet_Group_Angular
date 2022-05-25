@@ -24,10 +24,10 @@
     </nav>
     <div class="header">
         <img id="logo" [src]="logo" alt="logo" routerLink="">
-        <div class="search">
-            <input type="text" placeholder="Taper votre recherche">
+        <form #researchForm="ngForm" method="post" (ngSubmit)="onResearchSubmit(researchForm.value)" class="search">
+            <input type="text" name="research" placeholder="Taper votre recherche" ngModel>
             <a href="#"><img id="search" [src]="search" alt="search" ></a>
-        </div>
+        </form>
        
         <img id="carte" [src]="map" alt="carte">
     </div>
