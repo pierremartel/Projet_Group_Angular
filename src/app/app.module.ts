@@ -30,6 +30,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { AcknowledgementPageComponent } from './acknowledgement-page/acknowledgement-page.component';
 import { CgvComponent } from './cgv/cgv.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { ListPageProductsComponent } from './list-page-products/list-page-products.component';
 
 
 
@@ -58,7 +59,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     PaymentComponent,
     AcknowledgementPageComponent,
     CgvComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    ListPageProductsComponent
 
 
   ],

@@ -47,7 +47,8 @@ li, i{
 }
 
 #logo{
-    width: 15%;
+    width: 20%;
+    height:150px;
     cursor: pointer;
 }
 
@@ -95,7 +96,7 @@ li, i{
 /* Navigation principal------------------------------------------------ */
 
 .nav-principal{
-    background-color:rgb(97, 153, 112);
+    background-color:rgb(200, 231, 208);
     height:50px;
     
 }
@@ -125,4 +126,5 @@ li, i{
 
 a:hover {
     background-color:rgb(177, 206, 96);
+    
 }

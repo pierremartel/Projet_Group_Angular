@@ -18,7 +18,7 @@ icone! : string;
   constructor(private scroll: ViewportScroller, private router:Router) { }
 
   ngOnInit(): void {
-    this.banniere = './assets/photos/banniere2.jpg';
+    this.banniere = './assets/photos/paleo-table.jpg';
     this.icone = './assets/logo_icon/arrow-p.svg';
     
   }
