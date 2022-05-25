@@ -16,7 +16,12 @@
     <button (click)="onDeleteProduct()">Supprimer produit</button><i class="fa-solid fa-trash-can"></i> 
 </div>
 
+
 <!-- Child Component list products------------------------------------------------------------------- -->
+
+
+
+
 <main class="main">
     <app-list-page-products *ngFor="let product of products" [product]="product"></app-list-page-products>
     <!-- <div class="number-of-page">
