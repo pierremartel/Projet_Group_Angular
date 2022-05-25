@@ -38,17 +38,22 @@ export class PageProductsComponent implements OnInit {
 
 
 
-    //  this.productId = +this.route.snapshot.params['id'];
+    //   this.productId = this.route.snapshot.params['id'];
+    //  console.log(this.productId);
+
+    // this.route.params.subscribe(params => {
+    //   console.log(+params['id']);
+    // });
      
-    // this.http.get<any>('http://localhost:8000/products/').subscribe(id => {
-      // console.log(data)
+    // this.http.get<any>('http://localhost:8000/product/').subscribe(id => {
+    //   console.log(id)
 
       // for (let i = 9; i < id.length; i++){
       //  id[i].imageFileName = 'http://localhost:8000/uploads/images/product/' + id[i].imageFileName
       // }
       //     // console.log(data);
       //     this.productId = id
-      //      })
+          //  })
      
 
   }
