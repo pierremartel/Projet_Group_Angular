@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+// import { ListProducts } from '../models/product.model';
+
 
 
 @Component({
@@ -10,8 +12,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SinglePageProductsComponent implements OnInit {
 
-productById = [];
-id! : any;
+  // @Input() product!: ListProducts;
+
+productById: any ;
+id : any;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -45,13 +49,4 @@ id! : any;
     this.router.navigateByUrl('produits')
     
   }
-
-  
-
-  // getProductsById(id: number){
-
-  // }
-
-   
-
 }
