@@ -10,6 +10,8 @@ import {NgForm} from '@angular/forms';
 })
 export class AuthentificationCustomerComponent implements OnInit {
 icon! : string;
+iconArrow! : string;
+iconPlus! : string;
 
 
 registerError : any = [];
@@ -19,10 +21,11 @@ session : any = false;
 
   constructor(private http: HttpClient) {}
 
-
+  
   ngOnInit(): void {
     this.icon = './assets/logo_icon/icons_user.png';
-    
+    this.iconArrow = 'assets/logo_icon/arrow-right.svg';
+    this.iconPlus = 'assets/logo_icon/plus.svg';
     
   }
 
@@ -51,8 +54,7 @@ session : any = false;
         sessionStorage.setItem('city', this.session.user.city);
         sessionStorage.setItem('role', this.session.user.roles);
         sessionStorage.setItem('id', this.session.user.id);
-
-    })
+   })
     }
     
   }
