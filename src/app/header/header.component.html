@@ -26,6 +26,9 @@
         <img id="logo" [src]="logo" alt="logo" routerLink="">
         <form #researchForm="ngForm" method="post" (ngSubmit)="onResearchSubmit(researchForm.value)" class="search">
             <input type="text" name="research" placeholder="Taper votre recherche" ngModel>
+            <!-- <div *ngFor="let product of products" [product]="product">
+                <img [src]=product.imageFileName [alt]=product.title>
+            </div> -->
             <a routerLink="recherche"><img id="search" [src]="search" alt="search" ></a>
         </form>
        

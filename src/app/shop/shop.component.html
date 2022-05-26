@@ -27,24 +27,13 @@
         <p>{{article.Product.title}}</p>
         <p>{{article.Product.price}}</p>
         <p>{{article.quantity}}</p>
-        <p>13,50€</p>
+        <p>{{article.Product.price * article.quantity}}</p>
     </section>
-    <!-- <section class="content">
-        <div class="picture">
-            <img src="./assets/photos/produit_2.jpg" alt="">
-            <div>
-                <p><i class="fa-solid fa-trash-can"></i>Supprimer</p>
-            </div>
-        </div>
-        <p>Produit1</p>
-        <p>13,50€</p>
-        <p>1</p>
-        <p>13,50€</p>
-    </section> -->
+    
     <section class="count">
         <div class="count-content">
             <h3>Livraison :</h3>
-            <h3>Total :</h3>
+            <h3>Total : {{priceTotal}}€ </h3>
         </div>
     </section>
     <section class="payment-mode">

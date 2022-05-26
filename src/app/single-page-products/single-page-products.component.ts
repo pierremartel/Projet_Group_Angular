@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-// import { ListProducts } from '../models/product.model';
 
 
 
@@ -12,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SinglePageProductsComponent implements OnInit {
 
-  // @Input() product!: ListProducts;
+  $user_id: any = sessionStorage.getItem('id');
 
 productById: any ;
 id : any;
@@ -49,4 +48,17 @@ id : any;
     this.router.navigateByUrl('produits')
     
   }
+
+  addToDb(productId:any) : void {
+
+    let addCartData = new FormData();
+
+    addCartData.append("product_id", productId);
+
+    addCartData.append("user_id", this.$user_id);
+
+    this.http.post('http://localhost:8000/cart/add', addCartData).subscribe(result => {
+        console.log('addProduct', result );
+  })
+}
 }
