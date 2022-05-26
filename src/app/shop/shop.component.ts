@@ -12,6 +12,7 @@ export class ShopComponent implements OnInit {
 
   $user_id: any = sessionStorage.getItem('id');
 
+  articles : any = [];
   constructor(private router : Router, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -22,6 +23,14 @@ export class ShopComponent implements OnInit {
 
     this.http.post('http://localhost:8000/cart', CartData).subscribe(result => {
         console.log('resultCart', result);
+
+        this.articles = result 
+
+        // for (let i = 0; i < articles.length; i++){
+        //   result[i].imageFileName = 'http://localhost:8000/uploads/images/products/' + result[i].imageFileName
+        //  }
+
+        
     })
 
 
