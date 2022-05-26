@@ -20,7 +20,7 @@
     height:50px;
     margin:auto;
     border: 1px solid red;
-    display:none;
+    /* display:none; */
 }
 
 .main {
