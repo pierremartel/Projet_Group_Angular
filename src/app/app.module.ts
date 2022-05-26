@@ -31,6 +31,9 @@ import { AcknowledgementPageComponent } from './acknowledgement-page/acknowledge
 import { CgvComponent } from './cgv/cgv.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { ListPageProductsComponent } from './list-page-products/list-page-products.component';
+import { StripeComponent } from './stripe/stripe.component';
+import {loadStripe} from '@stripe/stripe-js';
+
 
 
 
@@ -60,7 +63,9 @@ import { ListPageProductsComponent } from './list-page-products/list-page-produc
     AcknowledgementPageComponent,
     CgvComponent,
     LegalNoticeComponent,
-    ListPageProductsComponent
+    ListPageProductsComponent,
+    StripeComponent,
+  
 
 
   ],
