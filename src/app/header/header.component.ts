@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
   map! : string;
   userEmail! : string | null;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     
@@ -21,4 +22,11 @@ export class HeaderComponent implements OnInit {
     this.map = './assets/logo_icon/carte.png';
     this.userEmail = sessionStorage.getItem('email');
     }
-  }
+
+    onResearchSubmit(value:any){
+      console.log(value);
+       this.http.get('http://localhost:8000/research/' + value.research).subscribe(result => {
+        console.log('dataResearch', result);
+    })}
+    }
+  
