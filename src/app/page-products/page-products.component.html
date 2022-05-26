@@ -1,6 +1,4 @@
-<app-nav-page-products ></app-nav-page-products>
-<!-- Chil component nav-------------------------------------------------------------------------- -->
-
+<!-- FILE ARIANE------------------------------------------------------------------------------------- -->
 <div class="title">
     <nav aria-label="Breadcrumb" class="breadcrumb">
         <ul>
@@ -8,20 +6,24 @@
             <li><span aria-current="page">Catalogue</span></li>
         </ul>
     </nav>
-    
-<!-- FILE ARIANE------------------------------------------------------------------------------------- -->
+</div>
 
+<!-- Chil component nav-------------------------------------------------------------------------- -->
+
+<app-nav-page-products ></app-nav-page-products>
+
+
+<!-- Title de la page + Bouton Add/Update/Delete -------------------------------------------------------->
+<div class="title-principal">
+    <h1 id="title">Les Produits</h1>
     <button (click)="onAddProduct()">Ajouter produit</button><i class="fa-solid fa-plus"></i>
     <button (click)="onUpdateProduct()">Modifier produit</button ><i class="fa-solid fa-pen-to-square"></i>
     <button (click)="onDeleteProduct()">Supprimer produit</button><i class="fa-solid fa-trash-can"></i> 
 </div>
+   
 
 
 <!-- Child Component list products------------------------------------------------------------------- -->
-
-
-
-
 <main class="main">
     <app-list-page-products *ngFor="let product of products" [product]="product"></app-list-page-products>
     <!-- <div class="number-of-page">

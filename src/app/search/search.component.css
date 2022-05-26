@@ -5,45 +5,14 @@
     height:40px;
     margin: auto;
     display:flex;
-    padding-bottom: 5px;
+    padding-bottom: 50px;
   }
 
-.breadcrumb ul {
-    display: flex;
-    margin:20px 0 10px 20px;
-    color: grey;
-    text-transform: uppercase;
-}
-    
-.breadcrumb li::before {
-    content: "→";
-}
-    
-.breadcrumb li:first-child::before {
-    content: "";
-}
-
-li{
-    list-style: none;
-    
-}
-
-a{
+.title a{
     color: grey;
 }
 
-/* Fil d'ariana ------------------------------------------------------- */
-
-
-.main {
-    width:90%;
-    margin: auto;
-    height: auto;
-    border: 1px solid;
-    display:flex;
-    flex-wrap: wrap;
-}
-
+/* Title page + Bouton Add/Update/Delete --------------------------------------------------------*/
 
 .title-principal {
     width:90%;
@@ -68,6 +37,19 @@ i{
     margin:0px 5px; 
     cursor:pointer;
 }
+
+/* Child Component list products----------------------------------------------------------------- */
+
+.main {
+    width:90%;
+    margin: auto;
+    height: auto;
+    border: 1px solid;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+
 
 .number-of-page {
     margin-top:120px;

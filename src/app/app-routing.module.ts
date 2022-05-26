@@ -12,6 +12,7 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { PageProductsComponent } from './page-products/page-products.component';
 import { SinglePageProductsComponent } from './single-page-products/single-page-products.component';
+import { SearchComponent } from './search/search.component';
 
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { CgvComponent } from './cgv/cgv.component';
@@ -29,6 +30,9 @@ const routes: Routes = [
     { path : 'produits', component :PageProductsComponent},
     { path : 'promotion', component:PromotionComponent},
     { path : 'produits/:id', component:SinglePageProductsComponent},
+    { path : 'recherche', component:SearchComponent},
+
+
     { path : 'mention-legales', component:LegalNoticeComponent},
     { path : 'conditions-generales-de-vente', component:CgvComponent},
 
