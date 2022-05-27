@@ -36,6 +36,18 @@ export class ShopComponent implements OnInit {
 
   }
 
+  deleteProduct(productId:any){
+    let CartData = new FormData();
+
+    CartData.append("user_id", this.$user_id);
+
+    CartData.append("product_id", productId);
+
+    this.http.post('http://localhost:8000/cart/delete', CartData).subscribe(result => {
+        console.log('resultCart', result); 
+    })
+  }
+
   onContinueByPayment(): void { 
     this.router.navigateByUrl('paiement');
   }

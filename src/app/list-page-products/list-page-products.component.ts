@@ -31,8 +31,15 @@ export class ListPageProductsComponent implements OnInit {
 
     addCartData.append("user_id", this.$user_id);
 
-    this.http.post('http://localhost:8000/cart/add', addCartData).subscribe(result => {
+    this.http.post('http://localhost:8000/admin/product/delete/', addCartData).subscribe(result => {
         console.log('addProduct', result );
   })
 }
+
+onDeleteProduct(ProductId:any) : void{
+  this.http.get('http://localhost:8000/admin/product/delete/' + ProductId).subscribe(result => {
+        console.log('deleteProduct', result );
+  })
+}
+
 }

@@ -20,8 +20,8 @@
     <section class="content" *ngFor="let article of articles">
         <div class="picture">
             <img [src]=article.Product.imageFileName [alt]=article.Product.title>
-            <div>
-                <p><i class="fa-solid fa-trash-can"></i>Supprimer</p>
+            <div (click)="deleteProduct(article.Product.id)">
+                <p ><i class="fa-solid fa-trash-can"></i>Supprimer</p>
             </div>
         </div>
         <p>{{article.Product.title}}</p>

@@ -26,21 +26,6 @@ export class AddProductComponent implements OnInit {
         this.file = <File>event.target.files[0];
 
         console.log(this.file.name)
-        
-        // let formData = new FormData();
-        
-        // formData.append("image", this.file);
-
-        // console.log(this.file)
-
-        // this.http.post('http://localhost:8000/admin/product/create', formData).subscribe(result => {
-            
-        // console.log('addProduct', result);
-
-            // const upload$ = this.http.post("/api/thumbnail-upload", formData);
-
-            // upload$.subscribe();
-        // })
       
     }
 
