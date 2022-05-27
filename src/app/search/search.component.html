@@ -14,8 +14,8 @@
 
 
 <!-- Child Component list products------------------------------------------------------------------- -->
-<main class="main">
-    <app-list-page-products *ngFor="let product of products" [product]="product"></app-list-page-products>
+<main class="main" *ngIf="articles">
+    <app-list-page-products *ngFor="let article of articles" ></app-list-page-products>
     <!-- <div class="number-of-page">
         <i class="fa-solid fa-angles-left"></i>
         <p>Pages</p>
