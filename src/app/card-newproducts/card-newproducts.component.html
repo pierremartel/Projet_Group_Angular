@@ -2,7 +2,7 @@
   <div class="product-content">
     
     <img class="product-image" [src]=product.imageFileName alt="product.title" />
-    <!-- <img class="infos" (click)="onShowProduct()" src="./assets/logo_icon/infos.svg" alt=""> -->
+    <a class="infos" [routerLink]="['/produits', product.id]"><img (click)="onShowProduct()" src="./assets/logo_icon/infos.svg" alt=""></a>
     <h2>{{ product.title }}</h2>
     <p>{{ product.price }}€</p>
     

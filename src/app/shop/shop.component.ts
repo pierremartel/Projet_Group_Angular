@@ -30,7 +30,7 @@ export class ShopComponent implements OnInit {
         
 
         // Récupération des images des produits stockés dans le panier
-        console.log('resultArticle', this.articles[2].Product.imageFileName);
+        // console.log('resultArticle', this.articles[2].Product.imageFileName);
 
         for (let i = 0; i < this.articles.length; i++){
           this.articles[i].Product.imageFileName = 'http://localhost:8000/uploads/images/products/' + this.articles[i].Product.imageFileName;
@@ -62,5 +62,7 @@ export class ShopComponent implements OnInit {
   onContinueByPayment(): void { 
     this.router.navigateByUrl('paiement');
   }
+
+  
 
 }

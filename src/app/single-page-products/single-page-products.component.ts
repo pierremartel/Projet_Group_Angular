@@ -49,6 +49,8 @@ id : any;
     
   }
 
+  // Ajouter un produit au click du bouton vers le panier
+
   addToDb(productId:any) : void {
 
     let addCartData = new FormData();

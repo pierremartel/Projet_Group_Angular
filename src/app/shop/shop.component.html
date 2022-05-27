@@ -8,7 +8,7 @@
 <!-- FILE ARIANE------------------------------------------------ -->
 
 
-<main class="main">
+<main class="main" >
     <section class="title">
         <h1>Mon panier</h1>
         <h2>Produit</h2>
@@ -17,7 +17,7 @@
         <h2>Total</h2>
     </section>
     <p>*Les articles dans le panier ne sont pas réservés </p>
-    <section class="content" *ngFor="let article of articles">
+    <section class="content" *ngFor="let article of articles" >
         <div class="picture">
             <img [src]=article.Product.imageFileName [alt]=article.Product.title>
             <div>
