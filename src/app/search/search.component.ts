@@ -9,15 +9,26 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
   productId!: number;
+
+  research:any;
+
   title! : any;
+
   
-  constructor(private router: Router,
-              private http: HttpClient,
+  constructor(private http: HttpClient,
               private route: ActivatedRoute,) { }
 
   products = [];
 
   ngOnInit(): void {
+
+
+    this.route.paramMap.subscribe(params => {
+    this.research = params.get('research');
+    })
+
+    console.log(this.research)
+
     
     this.route.paramMap.subscribe(params => {
       this.title = params.get('title');
@@ -25,20 +36,9 @@ export class SearchComponent implements OnInit {
       // console.log(id);
     });
 
+
+    this.http.get('http://localhost:8000/research/' + this.research).subscribe(result => {
+        console.log('dataResearch', result);
+    })
   }
-
-  
-
-  onAddProduct(): void {
-    this.router.navigateByUrl('produits/ajouter')
-  }
-
-  onUpdateProduct(): void {
-    this.router.navigateByUrl('produits/modifier')
-  }
-
-  onDeleteProduct(): void {
-    this.router.navigateByUrl('produits/supprimer')
-  }
-
 }

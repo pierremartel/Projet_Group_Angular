@@ -32,7 +32,7 @@ const routes: Routes = [
     { path : 'produits', component :PageProductsComponent},
     { path : 'promotion', component:PromotionComponent},
     { path : 'produits/:id', component:SinglePageProductsComponent},
-    { path : 'recherche', component:SearchComponent},
+    { path : 'recherche/:research', component:SearchComponent},
 
 
     { path : 'mention-legales', component:LegalNoticeComponent},

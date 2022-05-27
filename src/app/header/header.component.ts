@@ -14,11 +14,15 @@ export class HeaderComponent implements OnInit {
   map! : string;
   userEmail! : string | null;
 
+
+
+
   // picture! : string;
    Products = [] ;
 
   constructor(private http: HttpClient,
               private router : Router) { }
+
 
   ngOnInit(): void {
     
@@ -39,10 +43,19 @@ export class HeaderComponent implements OnInit {
     }
 
     onResearchSubmit(value:any){
+
+
+      console.log('submitresearch', value);
+
+      this.router.navigate(['recherche/', value.research])
+    
+
       console.log(value);
        this.http.get('http://localhost:8000/research/' + value.research).subscribe(result => {
         console.log('dataResearch', result);
     })}
 
+
     }
+}
   
