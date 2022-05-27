@@ -4,7 +4,13 @@
     width: 260px;
     height: 170px;
     object-fit: scale-down;
+   
     
+}
+
+.product-image:hover {
+    opacity: 0.6; 
+    cursor: pointer;
 }
 
 .new-product-button{
@@ -23,6 +29,7 @@
     flex-direction: column;
     align-items: center;
     font-size:20px;
+    position:relative;
     /* border: 1px solid;
     border-radius : 10px; */
     /* overflow: hidden; */
@@ -30,20 +37,19 @@
     
 }
 
- /* .infos{ */
-    /* width:20px;
+.infos img{
+    width:20px;
     height: 20px;
+    opacity:0;
     cursor: pointer;
     position:absolute;
-    left:130px;
-    bottom:215px;
+    left:120px;
+    top:75px;
     background-color:white;
     border-radius:10px;
-    padding:10px;  */
-    /* display: none; */
-    /* opacity:0; */
- /* }  */
+    padding:10px;
+} 
 
-/* .infos:hover {
+.infos img:hover {
     opacity:1;
-}   */
+}
