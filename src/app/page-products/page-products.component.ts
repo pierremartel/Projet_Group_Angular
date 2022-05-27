@@ -77,13 +77,6 @@ export class PageProductsComponent implements OnInit {
   onDeleteProduct(): void {
     this.router.navigateByUrl('produits/supprimer')
   }
-
-  // parentProducts(data:any) {
-  //   console.warn(data)
-  //   this.image=data.image;
-  //   this.title=data.title;
-  //   this.price=data.price;
-  // }
   
 
 }

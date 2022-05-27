@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {loadStripe, Stripe} from '@stripe/stripe-js';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-stripe',
@@ -8,12 +10,22 @@ import {loadStripe, Stripe} from '@stripe/stripe-js';
 })
 export class StripeComponent implements OnInit {
 
-  constructor() {
+  total : any ;
+
+  constructor(private router: Router,
+              private route: ActivatedRoute) {
   
    }
 
   ngOnInit(): void {
-    const stripe = loadStripe('')
+
+    // this.route.paramMap.subscribe(params => {
+    //   this.total = params.get('articles');
+
+    //   console.log(this.total);
+    // });
+
+    const stripe = loadStripe('pk_test_51L2XUDHyS6M4ulO8FfdYe5URF7aDZOogZvVHYsX25aSEEiDifl7xhKrp5IhmWoBP59HkAJ3GmITA0e8cCA55KIiM00UjlOTClA')
     .then((stripeObject)=>{
       
       if(stripeObject!=null){
@@ -81,21 +93,20 @@ export class StripeComponent implements OnInit {
     });
     
   }
-   style = {
-    base: {
-      color: '#32325d',
-      fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-      fontSmoothing: 'antialiased',
-      fontSize: '16px',
-      '::placeholder': {
-        color: '#aab7c4'
-      }
-    },
-    invalid: {
-      color: '#fa755a',
-      iconColor: '#fa755a'
-    }
-  };
+
+
+  onBackTo(): void {
+    this.router.navigateByUrl('panier');
+  }
+
+
+
+  onPurchaseTo(): void {
+    this.router.navigateByUrl('purchase');
+  }
+
+  
+  
 }
 
 

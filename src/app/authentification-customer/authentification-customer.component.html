@@ -28,7 +28,7 @@
         <form #registerForm="ngForm" method="post" (ngSubmit)="onSubmit(registerForm.value)">
             <div>
                 <label for="username">Nom*</label>
-                <input type="text" name="username" id="surname" placeholder="Nom" ngModel>
+                <input type="text" name="username" id="surname" placeholder="Nom" ngModel required>
             </div>
             <div>
                 <label for="userfirstname">Prénom*</label>

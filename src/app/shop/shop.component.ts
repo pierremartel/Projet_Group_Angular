@@ -11,8 +11,10 @@ import { HttpClient } from '@angular/common/http';
 export class ShopComponent implements OnInit {
 
   $user_id: any = sessionStorage.getItem('id');
-
   articles : any = [];
+  priceTotalCalcul : any = [];
+  priceTotal: any;
+  
   constructor(private router : Router, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -23,14 +25,35 @@ export class ShopComponent implements OnInit {
 
     this.http.post('http://localhost:8000/cart', CartData).subscribe(result => {
         console.log('resultCart', result);
+        // Variable qui contient les produit stockés dans le panier
+        this.articles = result;
         
-        this.articles = result
 
-        console.log('resultArticle', this.articles[2].Product.imageFileName);
+        // Récupération des images des produits stockés dans le panier
+        // console.log('resultArticle', this.articles[2].Product.imageFileName);
 
         for (let i = 0; i < this.articles.length; i++){
           this.articles[i].Product.imageFileName = 'http://localhost:8000/uploads/images/products/' + this.articles[i].Product.imageFileName;
-        }      
+        }
+        
+        // Calcul Prix total du panier
+        for (let t = 0; t < this.articles.length; t++){
+          let prixArticles = this.articles[t].Product.price;
+          let quantityArticles = this.articles[t].quantity;
+          // console.log (quantityArticles);
+
+          let sum = prixArticles * quantityArticles ;
+          // console.log(sum);
+
+          this.priceTotalCalcul.push(sum);
+
+          // console.log(this.priceTotalCalcul);
+
+          const reducer = ( accumulator: any, currentValue: any) => accumulator + currentValue
+          this.priceTotal = this.priceTotalCalcul.reduce(reducer, 0);
+          console.log(this.priceTotal);
+        }
+        
     })
 
 
@@ -51,5 +74,7 @@ export class ShopComponent implements OnInit {
   onContinueByPayment(): void { 
     this.router.navigateByUrl('paiement');
   }
+
+  
 
 }
