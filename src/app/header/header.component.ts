@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
   map! : string;
   userEmail! : string | null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
     
@@ -24,9 +25,11 @@ export class HeaderComponent implements OnInit {
     }
 
     onResearchSubmit(value:any){
-      console.log(value);
-       this.http.get('http://localhost:8000/research/' + value.research).subscribe(result => {
-        console.log('dataResearch', result);
-    })}
+
+      console.log('submitresearch', value);
+
+      this.router.navigate(['recherche/', value.research])
+    
     }
+}
   
