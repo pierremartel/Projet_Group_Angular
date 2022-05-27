@@ -13,6 +13,8 @@ export class ListPageProductsComponent implements OnInit {
 
   $user_id: any = sessionStorage.getItem('id');
 
+  $user_role: any = sessionStorage.getItem('role');
+
   @Input() product!: ListProducts;
   constructor(private router: Router, private http: HttpClient) { }
 

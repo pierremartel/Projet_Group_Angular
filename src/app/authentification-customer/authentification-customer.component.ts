@@ -52,7 +52,7 @@ session : any = false;
         sessionStorage.setItem('address', this.session.user.address);
         sessionStorage.setItem('postalcode', this.session.user.postalcode);
         sessionStorage.setItem('city', this.session.user.city);
-        sessionStorage.setItem('role', this.session.user.roles);
+        sessionStorage.setItem('role', this.session.user.role);
         sessionStorage.setItem('id', this.session.user.id);
    })
     }
