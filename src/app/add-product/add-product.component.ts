@@ -64,7 +64,7 @@ export class AddProductComponent implements OnInit {
     console.log('formdata', formData);
     
         this.http.post('http://localhost:8000/admin/product/create', formData).subscribe(result => {
-        console.log('addProduct', result);
+        console.log('addProduct', result );
     })}
 
 }

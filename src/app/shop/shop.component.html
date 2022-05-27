@@ -17,19 +17,19 @@
         <h2>Total</h2>
     </section>
     <p>*Les articles dans le panier ne sont pas réservés </p>
-    <section class="content">
+    <section class="content" *ngFor="let article of articles">
         <div class="picture">
-            <img src="./assets/photos/produit_1.jpg" alt="">
+            <img [src]=article.Product.imageFileName [alt]=article.Product.title>
             <div>
                 <p><i class="fa-solid fa-trash-can"></i>Supprimer</p>
             </div>
         </div>
-        <p>Produit1</p>
-        <p>13,50€</p>
-        <p>1</p>
+        <p>{{article.Product.title}}</p>
+        <p>{{article.Product.price}}</p>
+        <p>{{article.quantity}}</p>
         <p>13,50€</p>
     </section>
-    <section class="content">
+    <!-- <section class="content">
         <div class="picture">
             <img src="./assets/photos/produit_2.jpg" alt="">
             <div>
@@ -40,7 +40,7 @@
         <p>13,50€</p>
         <p>1</p>
         <p>13,50€</p>
-    </section>
+    </section> -->
     <section class="count">
         <div class="count-content">
             <h3>Livraison :</h3>

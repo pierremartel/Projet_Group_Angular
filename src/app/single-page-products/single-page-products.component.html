@@ -3,24 +3,24 @@
     <ul>
         <li><a routerLink="">Accueil</a></li>
         <li><a routerLink="/produits">Catalogue</a></li>
-        <li><span aria-current="page">Nom du produit</span></li>
-    </ul>
+        <li><span aria-current="page">{{productById.title}}</span></li> 
+    </ul><!--A VERIFIER --> 
 </nav>
 
 <!-- FILE ARIANE------------------------------------------------ -->
 
-<main class="main" >
+<main class="main">
 
-    <div class="content">
+    <div class="content" *ngIf="productById">
         <div class="content-card">
-            <img src="./assets/photos/produit_2.jpg" alt="">
-            <h1>Clémentine d'Espagne</h1>
-            <p>3,50€</p>
+            <img [src]=productById.imageFileName alt=""productById.title>
+            <h1>{{productById.title}}</h1>
+            <p>{{productById.price}}€</p>
         </div>
         <div class="content-description">
             <h2>Description:</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, soluta voluptatibus. Corporis harum, facilis fugit voluptas quod ipsam perferendis laboriosam.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, soluta voluptatibus. Corporis harum, facilis fugit voluptas quod ipsam perferendis laboriosam.</p>
+            <p>{{productById.content}}</p>
+            
         </div>
     </div>
 

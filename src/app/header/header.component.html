@@ -22,12 +22,12 @@
             
         </ul>
     </nav>
-    <div class="header">
+    <div class="header" >
         <img id="logo" [src]="logo" alt="logo" routerLink="">
-        <div class="search">
-            <input type="text" placeholder="Taper votre recherche">
-            <a href="#"><img id="search" [src]="search" alt="search" ></a>
-        </div>
+        <form #researchForm="ngForm" method="post" (ngSubmit)="onResearchSubmit(researchForm.value)" class="search">
+            <input type="text" name="research" placeholder="Taper votre recherche" ngModel>
+            <a routerLink="recherche"><img id="search" [src]="search" alt="search" ></a>
+        </form>
        
         <img id="carte" [src]="map" alt="carte">
     </div>
@@ -41,7 +41,7 @@
             </li>
             
             <li>
-                <a routerLink="promotion" routerLinkActive="active" >Promotions</a>
+                <a routerLink="promotion" routerLinkActive="active" >Nouveautés</a>
             </li>
             <li>
                 <a routerLink="about" routerLinkActive="active">Qui sommes-nous?</a>
