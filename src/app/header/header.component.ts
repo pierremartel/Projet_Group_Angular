@@ -14,7 +14,15 @@ export class HeaderComponent implements OnInit {
   map! : string;
   userEmail! : string | null;
 
-  constructor(private router: Router, private http: HttpClient) { }
+
+
+
+  // picture! : string;
+   Products = [] ;
+
+  constructor(private http: HttpClient,
+              private router : Router) { }
+
 
   ngOnInit(): void {
     
@@ -22,14 +30,32 @@ export class HeaderComponent implements OnInit {
     this.search = './assets/logo_icon/search.svg';
     this.map = './assets/logo_icon/carte.png';
     this.userEmail = sessionStorage.getItem('email');
+
+    // this.http.get<any>('http://localhost:8000/products').subscribe(data => {
+
+    //   for (let i = 0; i < data.length; i++){
+    //    data[i].imageFileName = 'http://localhost:8000/uploads/images/products/' + data[i].imageFileName
+    //   }
+    //       this.products = data
+    //        })
+
+
     }
 
     onResearchSubmit(value:any){
+
 
       console.log('submitresearch', value);
 
       this.router.navigate(['recherche/', value.research])
     
+
+      console.log(value);
+       this.http.get('http://localhost:8000/research/' + value.research).subscribe(result => {
+        console.log('dataResearch', result);
+    })}
+
+
     }
 }
   
