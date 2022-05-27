@@ -1,38 +1,39 @@
 <main>
     <div class="title">Modifier un produit</div>
     <div class="separation"></div>
-    <div class="form">
-        <form action="#" method="post">
+    <div *ngIf="productEdit" class="form">
+        <form #addProductForm="ngForm" method="post" (ngSubmit)="onSubmitEditP(addProductForm.value)"method="post">
             <div class="form-content">
                 <label for="category">Catégorie :</label>
-                <select id="category" name="category">
-                    <option value="viande"selected>Viandes</option>
-                    <option value="Poissons">Poissons</option>
-                    <option value="Fruits" >Fruits</option>
-                    <option value="Légumes">Légumes</option>
-                    <option value="Boissons">Boissons</option>
-            </select><br>
+                <select id="category" name="category" ngModel="{{productEdit.category.id}}">                       
+                        <option value="3">Poisson</option>
+                        <option value="4">Viandes</option>
+                        <option value="5" >Boisson</option>
+                        <option value="6">Fruit</option>
+                        <option value="7">Légumes</option>
+                </select><br>
+               
             </div>
             <div class="form-content">
-                <label for="name">Nom du produit :</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <div class="form-content">
-                <label for="Quantity">Quantité :</label>
-                <input type="text" id="quantity" name="quantity">
+                <label for="title">Nom du produit :</label>
+                <input type="text" id="name" name="title" ngModel="{{productEdit.title}}">
             </div>
             <div class="form-content">
                 <label for="price">Prix :</label>
-                <input type="text" id="price" name="price">
+                <input type="text" id="price" name="price" ngModel="{{productEdit.price}}">
             </div>
             <div class="form-content">
                 <label for="image">Image :</label>
-                <input type="file" id="image" name="image" class="file-image">
+                <input type="file" class="file-input"
+                (change)="onFileSelected($event)" #fileUpload
+                >
             </div>
+            <!--<img src="{{productEdit.imageFileName}}" alt="">-->
             <div class="form-content">
-                <label for="description">Description :</label>
-                <textarea id="description" name="description" rows="4" cols="23"></textarea>
+                <label for="content">Description :</label>
+                <textarea id="description" name="content" rows="4" cols="23" ngModel="{{productEdit.content}}"></textarea>
             </div>
+            <input type="hidden" name="id" ngModel="{{productEdit.id}}">
             <input type="submit" value="Valider" id="btn">
         </form>
     </div>

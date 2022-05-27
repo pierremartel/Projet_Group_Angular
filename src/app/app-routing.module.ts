@@ -25,7 +25,7 @@ const routes: Routes = [
     { path: 'purchase', component: AcknowledgementPageComponent },
     { path : 'contact', component :ContactComponent},
     { path : 'produits/ajouter', component :AddProductComponent},
-    { path : 'produits/modifier', component :UpdateProductComponent},
+    { path : 'modifier/:id', component :UpdateProductComponent},
     { path : 'produits/supprimer', component :DeleteProductComponent},
     { path : 'produits', component :PageProductsComponent},
     { path : 'promotion', component:PromotionComponent},

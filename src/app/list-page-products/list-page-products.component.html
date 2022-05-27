@@ -5,7 +5,7 @@
             <h2 class="product-title">{{ product.title }}</h2>
             <p class="product-price">{{ product.price }}€</p> 
             <button (click)="addToDb(product.id)"class="btn-buy">Ajouter <i class="fa-solid fa-cart-arrow-down"></i></button>
+            <a class="infos" [routerLink]="['/modifier', product.id]">Modifier produit<i class="fa-solid fa-pen-to-square"></i></a>
+            <button (click)="onDeleteProduct(product.id)">Supprimer produit</button><i class="fa-solid fa-trash-can"></i> 
         </div>
     </div>
-
-
