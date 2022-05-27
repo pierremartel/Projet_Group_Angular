@@ -16,7 +16,7 @@
 <!-- Title de la page + Bouton Add/Update/Delete -------------------------------------------------------->
 <div class="title-principal">
     <h1 id="title">Les Produits</h1>
-    <button (click)="onAddProduct()">Ajouter produit</button><i class="fa-solid fa-plus"></i>
+    <button *ngIf="$user_role === 'ROLE_ADMIN'" (click)="onAddProduct()">Ajouter produit<i class="fa-solid fa-plus"></i></button>
     
 </div>
    

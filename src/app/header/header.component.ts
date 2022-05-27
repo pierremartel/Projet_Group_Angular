@@ -31,5 +31,10 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['recherche/', value.research])
     
     }
+
+    logout(){
+      sessionStorage.clear();
+      this.router.navigate([''])
+    }
 }
   

@@ -12,6 +12,8 @@ import { identity } from 'rxjs';
 export class PageProductsComponent implements OnInit {
   productId!: number;
 
+  $user_role: any = sessionStorage.getItem('role');
+
   // image="";
   // title="";
   // price="";

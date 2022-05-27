@@ -9,8 +9,7 @@
                 <i routerLink="authenticate" class="fa-solid fa-circle-user fa-2x"></i>
             </li>
             <ng-template #elseBlock>
-                <p>{{userEmail}}</p>
-                <li>
+                <li (click)="logout()">
                     <a>Déconnexion</a>
                     <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
                 </li>
