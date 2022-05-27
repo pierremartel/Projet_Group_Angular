@@ -1,6 +1,6 @@
  <div class="content">
         <div class="product">
-            <a routerlink=""><img [src]="product.imageFileName" [alt]=product.title></a> 
+            <a routerlink=""><img [src]="product.imageFileName" [alt]=product.title></a>
             <a class="infos" [routerLink]="['/produits', product.id]"><img (click)="onShowProduct()" src="./assets/logo_icon/infos.svg" alt=""></a>
             <h2 class="product-title">{{ product.title }}</h2>
             <p class="product-price">{{ product.price }}€</p> 

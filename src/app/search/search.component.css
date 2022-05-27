@@ -58,3 +58,11 @@ i{
     font-size:20px;
     cursor: pointer;
 }
+
+.noresult {
+    text-align:center;
+}
+
+.imgnoresult{
+ height: 200px;
+}
