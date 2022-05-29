@@ -100,3 +100,16 @@ input {
     flex-direction: column;
 }
 
+@media(max-width: 920px){
+  
+    .main{height: 50%;
+        display: flex;
+    flex-direction:column-reverse;
+
+}
+form label {
+    display:none
+  }
+  #icon_content{ margin: auto;}
+}
+    
