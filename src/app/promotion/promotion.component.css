@@ -38,7 +38,7 @@ a{
   width:90%;
   margin: auto;
   height: auto;
-  border: 1px solid;
+  /* border: 1px solid; */
   display:flex;
   flex-wrap: wrap;
 }
@@ -76,13 +76,6 @@ i{
   
 }
 
-/* .main {
-  width:90%;
-  margin: auto;
-  height: 1000px;
-  border: 1px solid;
-} */
-
 
 
 img {
@@ -95,67 +88,19 @@ cursor: pointer;
 
 }
 
-/* span img{
-  width:20px;
-  height: 20px;
-  opacity:0;
-  cursor: pointer;
-  position:absolute;
-  left:130px;
-  top:75px;
-  background-color:white;
-  border-radius:10px;
-  padding:10px;
-  /* display: none; */
-/* } */ 
 
-/* span img:hover {
-  opacity:1;
-} */
+/* Media Queries---------------------------------------------------------- */
 
+@media screen and (max-width: 920px) {
+  .title{
+    display:none;
+  }
 
-/* .product {
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items: flex-end;
-  margin:10px 10px;
-} */
+  .title-principal{
+    margin-top: 30px;
+    margin-left: 35px;
+  }
 
+}
 
-/* .content {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-
-} */
-
-/* .product-title {
-  transform: translate(-125px);
-  font-size: 20px;
-  
-} */
-/* .product-price{
-  font-size: 20px;
-} */
-
-/* .product-icon{
-  margin : 5px 0;
-  display: flex;
-  cursor: pointer;
-} */
-
-/* .btn-buy {
-  width: 100%;
-} */
-
-
-/* .number-of-page {
-  margin-top:120px;
-  display: flex;
-  justify-content: center;
-  font-size:20px;
-  cursor: pointer;
-} */
 

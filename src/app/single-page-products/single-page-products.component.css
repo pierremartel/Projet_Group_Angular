@@ -48,7 +48,7 @@ a{
 
 .main {
     width:90%;
-    height:600px;
+    height:auto;
     margin:auto;
 
 }
@@ -70,7 +70,7 @@ img {
     align-items: flex-end;
 }
 .content-description{
-    height:285px;
+    height:auto;
     width:40%;
     margin-top:50px;
     border-radius:10px;
@@ -84,5 +84,40 @@ img {
 }
 button {
     margin-right:20px;
+
+}
+
+/* Media Queries---------------------------------------------------------- */
+
+@media screen and (max-width: 920px) {
+
+    .breadcrumb{
+        display:none;
+    }
+
+    .content {
+        margin-top:30px;
+        display: flex;
+        flex-direction:column;
+        
+    }
+
+    .content-card{
+        width:90%;
+        margin: auto;
+    }
+
+    .content-description{
+        width:90%;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display:flex;
+    }
+    
+    button{
+        margin-right:5px;
+    }
 
 }

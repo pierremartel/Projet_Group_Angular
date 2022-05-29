@@ -12,6 +12,9 @@ export class PromotionComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) { }
 
+  $user_role: any = sessionStorage.getItem('role');
+
+
   newProducts = [];
 
   ngOnInit(): void {

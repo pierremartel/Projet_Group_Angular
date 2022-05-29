@@ -19,44 +19,44 @@
     <div class="form-1">
         <div *ngIf="subscribeMessage" class="error-message">{{subscribeMessage}}</div>
         <div class="title">
-            <i class="fa-solid fa-plus fa-3x"></i>
+            <i class="fa-solid fa-plus fa-2x"></i>
             <h2>
                 Pas encore de compte?<br> <span>Inscrivez-vous</span>
             </h2>
         </div>
        
         <form #registerForm="ngForm" method="post" (ngSubmit)="onSubmit(registerForm.value)">
-            <div>
+            <div class="form-content">
                 <label for="username">Nom*</label>
                 <input type="text" name="username" id="surname" placeholder="Nom" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="userfirstname">Prénom*</label>
-                <input type="text" name="userfirstname" id="name" placeholder="Prénom" ngModel>
+                <input type="text" name="userfirstname" id="name" placeholder="Prénom" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="address">Adresse*</label>
-                <input type="text" name="address" id="address" placeholder="Adresse" ngModel>
+                <input type="text" name="address" id="address" placeholder="Adresse" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="postalcode">Code Postal*</label>
-                <input type="text" name="postalcode" id="postalcode" placeholder="Code postal" ngModel>
+                <input type="text" name="postalcode" id="postalcode" placeholder="Code postal" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="city">Ville*</label>
-                <input type="text" name="city" id="city" placeholder="Ville" ngModel>
+                <input type="text" name="city" id="city" placeholder="Ville" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="email">Adresse Mail*</label>
-                <input type="email" name="email" id="email" placeholder="Adresse mail" ngModel>
+                <input type="email" name="email" id="email" placeholder="Adresse mail" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="password">Mot de passe*</label>
-                <input type="password" name="password" id="password" placeholder="Mot de passe" ngModel>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="confirm_password">Confirmation*</label>
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer votre mot de passe" ngModel>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmer votre mot de passe" ngModel required>
             </div>
 
             <div class="button"> 
@@ -73,7 +73,7 @@
     <div *ngIf="session === false; else elseBlock"class="form-2">
         <div *ngIf="loginMessage" class="error-message">{{loginMessage}}</div>
         <div class="title">
-            <i class="fa-solid fa-arrow-right fa-3x"></i>
+            <i class="fa-solid fa-arrow-right fa-2x"></i>
             <h2>
                 Déjà inscrit?<br> <span>Identifiez-vous</span>
             </h2>
@@ -81,13 +81,13 @@
         
         <form #loginForm="ngForm" (ngSubmit)="onSubmitLogin(loginForm.value)">
 
-            <div>
+            <div class="form-content">
                 <label for="email">Adresse Mail*</label>
-                <input type="email" name="email" id="email" placeholder="Adresse mail" ngModel>
+                <input type="email" name="email" id="email" placeholder="Adresse mail" ngModel required>
             </div>
-            <div>
+            <div class="form-content">
                 <label for="password">Mot de passe*</label>
-                <input type="password" name="password" id="password" placeholder="Mot de passe" ngModel>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" ngModel required>
             </div>
 
             

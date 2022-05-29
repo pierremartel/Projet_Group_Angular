@@ -39,7 +39,7 @@ a{
     width:90%;
     margin: auto;
     height: auto;
-    border: 1px solid;
+    /* border: 1px solid; */
     display:flex;
     flex-wrap: wrap;
 }
@@ -101,4 +101,18 @@ i{
     transform: scale(1.1);
     transition: transform ease-in 0.2s
 
+}
+
+/* Media Queries---------------------------------------------------------- */
+
+@media screen and (max-width: 920px) {
+
+    .category, .title {
+        display:none;
+    }
+
+    .title-principal{
+        margin-top: 30px;
+        padding-left: 50px;
+    }
 }
