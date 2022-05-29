@@ -66,7 +66,10 @@ onSubmitEditP(value:any){
     
         this.http.post('http://localhost:8000/admin/product/edit', formData).subscribe(result => {
         console.log('EditProduct', result );
+        this.router.navigate(['produits']);
     })
+
+    
   }
 
 }

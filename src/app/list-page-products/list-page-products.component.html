@@ -1,11 +1,11 @@
  <div class="content">
         <div class="product">
-            <a routerlink=""><img [src]="product.imageFileName" [alt]=product.title></a> 
+            <a routerlink=""><img [src]="product.imageFileName" [alt]=product.title></a>
             <a class="infos" [routerLink]="['/produits', product.id]"><img (click)="onShowProduct()" src="./assets/logo_icon/infos.svg" alt=""></a>
             <h2 class="product-title">{{ product.title }}</h2>
             <p class="product-price">{{ product.price }}€</p> 
-            <button (click)="addToDb(product.id)"class="btn-buy">Ajouter <i class="fa-solid fa-cart-arrow-down"></i></button>
-            <a *ngIf="$user_role === 'ROLE_ADMIN'" class="infos" [routerLink]="['/modifier', product.id]">Modifier produit<i class="fa-solid fa-pen-to-square"></i></a>
-            <button *ngIf="$user_role === 'ROLE_ADMIN'" (click)="onDeleteProduct(product.id)">Supprimer produit</button><i class="fa-solid fa-trash-can"></i> 
+            <button (click)="addToCart(product.id)"class="btn-buy">Ajouter <i class="fa-solid fa-cart-arrow-down"></i></button>
+            <a *ngIf="$user_role === 'ROLE_ADMIN'" class="infos" [routerLink]="['/modifier', product.id]"><i class="fa-solid fa-pen-to-square"></i></a>
+            <button *ngIf="$user_role === 'ROLE_ADMIN'" (click)="onDeleteProduct(product.id)">Supprimer<i class="fa-solid fa-trash-can"></i></button> 
         </div>
     </div>

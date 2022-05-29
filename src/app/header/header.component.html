@@ -10,16 +10,16 @@
             <li id="service">
                 <a href="#">Comment ça marche ?</a>  
             </li>
-            <li *ngIf="!userEmail; else elseBlock">
+            <li>
                 <a routerLink="authenticate" >Se connecter</a>
                 <i routerLink="authenticate" class="fa-solid fa-circle-user fa-2x"></i>
             </li>
-            <ng-template #elseBlock>
+            
                 <li (click)="logout()">
                     <a>Déconnexion</a>
                     <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
                 </li>
-            </ng-template>          
+                     
                 <li>
                     <a routerLink="panier">Panier</a>
                     <i routerLink="panier" class="fa-solid fa-basket-shopping fa-2x"></i>
@@ -52,7 +52,7 @@
                 <a routerLink="promotion" routerLinkActive="active" >Nouveautés</a>
             </li>
             <li>
-                <a routerLink="about" routerLinkActive="active">Qui sommes-nous?</a>
+                <a routerLink="contact" routerLinkActive="active">Contactez-nous</a>
             </li>
         </ul>
        
