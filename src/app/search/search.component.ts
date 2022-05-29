@@ -8,10 +8,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  
+  
   productId!: number;
-
   research:any;
-
   title! : any;
   products : any = [];
 

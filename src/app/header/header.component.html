@@ -1,4 +1,10 @@
 <header>
+    <!-- Menu burger -->
+    <div class="contain-burger">
+        <div class="burger-nav"></div>
+    </div>
+    <!-- Menu burger -->
+
     <nav class="nav-secondaire">
         <ul>
             <li id="service">
@@ -23,15 +29,15 @@
     </nav>
     <div class="header" >
         <img id="logo" [src]="logo" alt="logo" routerLink="">
-        <form #researchForm="ngForm" method="post" (ngSubmit)="onResearchSubmit(researchForm.value)" class="search">
-            <input type="text" name="research" placeholder="Taper votre recherche" ngModel>
+        <form #researchForm="ngForm" method="post" (ngSubmit)="onResearchSubmit(researchForm.value)" class="search" >
+            <input type="text" name="research" placeholder="Taper votre recherche" ngModel >
             <!-- <div *ngFor="let product of products" [product]="product">
                 <img [src]=product.imageFileName [alt]=product.title>
             </div> -->
-            <a routerLink="recherche"><img id="search" [src]="search" alt="search" ></a>
+            <a routerLink="recherche/:research"><img id="search" [src]="search" alt="search" ></a>
         </form>
        
-        <img id="carte" [src]="map" alt="carte">
+        <img id="map" [src]="map" alt="carte">
     </div>
     <nav class="nav-principal">
         <ul>

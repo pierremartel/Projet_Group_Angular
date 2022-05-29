@@ -50,9 +50,13 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['recherche/', value.research]));
 
 
+
+    
+
       // this.router.navigate(['recherche/', value.research])
     
     }
+
 
       
     
@@ -60,8 +64,11 @@ export class HeaderComponent implements OnInit {
       sessionStorage.clear();
       this.router.navigate([''])
     }
+
+
+
+
 }
 
-
-
   
+
