@@ -3,22 +3,13 @@
     <a routerLink="">Accueil</a>
 </div>
 
-<!-- Title de la page + Bouton Add/Update/Delete -------------------------------------------------------->
-<!--<div class="title-principal">
-    <h1 id="title">Résultats de recherche pour </h1>
-    <button (click)="onAddProduct()">Ajouter produit</button><i class="fa-solid fa-plus"></i>
-    <button (click)="onUpdateProduct()">Modifier produit</button ><i class="fa-solid fa-pen-to-square"></i>
-    <button (click)="onDeleteProduct()">Supprimer produit</button><i class="fa-solid fa-trash-can"></i> 
-</div> -->
-   
-
-
 <!-- Child Component list products------------------------------------------------------------------- -->
-<main class="main" *ngIf="articles">
-    <app-list-page-products *ngFor="let article of articles" ></app-list-page-products>
-    <!-- <div class="number-of-page">
-        <i class="fa-solid fa-angles-left"></i>
-        <p>Pages</p>
-        <i class="fa-solid fa-angles-right"></i>
-    </div> -->
+<main class="main" *ngIf="products.length > 0; else elseBlock">
+    <app-list-page-products *ngFor="let product of products" [product]="product" ></app-list-page-products>
 </main>
+<ng-template #elseBlock
+>
+
+    <div class="noresult"><img class="imgnoresult"src="https://maikadesnoyers.com/wp-content/uploads/2017/01/IMG_0349.jpg" alt=""><p>Aucuns produits ne correspondent à votre recherche</p></div>
+    
+</ng-template>

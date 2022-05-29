@@ -13,13 +13,11 @@ export class SearchComponent implements OnInit {
   research:any;
 
   title! : any;
-  articles : any = [];
+  products : any = [];
 
   
   constructor(private http: HttpClient,
               private route: ActivatedRoute,) { }
-
-  products = [];
 
   ngOnInit(): void {
 
@@ -28,7 +26,7 @@ export class SearchComponent implements OnInit {
     this.research = params.get('research');
     })
 
-    console.log(this.research)
+    console.log('blabla',this.research)
 
     
     this.route.paramMap.subscribe(params => {
@@ -38,17 +36,16 @@ export class SearchComponent implements OnInit {
     });
 
 
-    this.http.get('http://localhost:8000/research/' + this.research).subscribe(result => {
-        // console.log('dataResearch', result);
+    this.http.get('http://localhost:8000/research/' + this.research).subscribe(data => {
 
         // On stocke le résultat de la recherche dans une variable
-        this.articles = result ;
-        console.log('okok', this.articles[2]);
+        this.products = data;
+        console.log('okok', this.products.length);
         // On boucle sur ce résultat
-        for (let i = 0; i < this.articles.length; i++){
-          this.articles[i].imageFileName = 'http://localhost:8000/uploads/images/products/' + this.articles[i].imageFileName
+        for (let i = 0; i < this.products.length; i++){
+          this.products[i].imageFileName = 'http://localhost:8000/uploads/images/products/' + this.products[i].imageFileName;
          }
-        //  console.log(this.articles);
+        console.log(this.products);
          
          
     })
