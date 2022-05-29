@@ -5,13 +5,7 @@
 
 <!-- Child Component list products------------------------------------------------------------------- -->
 
-<main class="main" >
-    <app-list-page-products *ngFor="let product of articles" [product]="product" ></app-list-page-products>
-    <!-- <div class="number-of-page">
-        <i class="fa-solid fa-angles-left"></i>
-        <p>Pages</p>
-        <i class="fa-solid fa-angles-right"></i>
-    </div> -->
+
 
 <main class="main" *ngIf="products.length > 0; else elseBlock">
     <app-list-page-products *ngFor="let product of products" [product]="product" ></app-list-page-products>
