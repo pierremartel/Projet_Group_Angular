@@ -54,16 +54,12 @@ export class HeaderComponent implements OnInit {
        this.http.get('http://localhost:8000/research/' + value.research).subscribe(result => {
         console.log('dataResearch', result);
     })}
-
-
-    }
-
-
     logout(){
       sessionStorage.clear();
       this.router.navigate([''])
     }
 }
+
 
 
   
