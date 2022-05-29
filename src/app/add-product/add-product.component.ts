@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -12,7 +13,7 @@ export class AddProductComponent implements OnInit {
   // file: File | null = null;
   file!: File;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -50,6 +51,7 @@ export class AddProductComponent implements OnInit {
     
         this.http.post('http://localhost:8000/admin/product/create', formData).subscribe(result => {
         console.log('addProduct', result );
+        this.router.navigate(['produits']);
     })}
 
 }

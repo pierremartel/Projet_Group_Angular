@@ -14,6 +14,28 @@ export class ShopComponent implements OnInit {
   articles : any = [];
   priceTotalCalcul : any = [];
   priceTotal: any;
+
+  getTotalPrice() {
+
+    // Calcul Prix total du panier
+        for (let t = 0; t < this.articles.length; t++){
+          let prixArticles = this.articles[t].Product.price;
+          let quantityArticles = this.articles[t].quantity;
+          // console.log (quantityArticles);
+
+          let sum = prixArticles * quantityArticles ;
+          // console.log(sum);
+
+          this.priceTotalCalcul.push(sum);
+
+          // console.log(this.priceTotalCalcul);
+
+          const reducer = ( accumulator: any, currentValue: any) => accumulator + currentValue
+          this.priceTotal = this.priceTotalCalcul.reduce(reducer, 0);
+          console.log(this.priceTotal);
+        }
+
+  }
   
   constructor(private router : Router, private http: HttpClient) {}
 
@@ -34,25 +56,9 @@ export class ShopComponent implements OnInit {
 
         for (let i = 0; i < this.articles.length; i++){
           this.articles[i].Product.imageFileName = 'http://localhost:8000/uploads/images/products/' + this.articles[i].Product.imageFileName;
-        }
-        
-        // Calcul Prix total du panier
-        for (let t = 0; t < this.articles.length; t++){
-          let prixArticles = this.articles[t].Product.price;
-          let quantityArticles = this.articles[t].quantity;
-          // console.log (quantityArticles);
+        };
 
-          let sum = prixArticles * quantityArticles ;
-          // console.log(sum);
-
-          this.priceTotalCalcul.push(sum);
-
-          // console.log(this.priceTotalCalcul);
-
-          const reducer = ( accumulator: any, currentValue: any) => accumulator + currentValue
-          this.priceTotal = this.priceTotalCalcul.reduce(reducer, 0);
-          console.log(this.priceTotal);
-        }
+        this.getTotalPrice();   
         
     })
 
@@ -67,8 +73,19 @@ export class ShopComponent implements OnInit {
     CartData.append("product_id", productId);
 
     this.http.post('http://localhost:8000/cart/delete', CartData).subscribe(result => {
-        console.log('resultCart', result); 
+        console.log('resultCart', result);
+        this.ngOnInit();
+        this.getTotalPrice();
     })
+
+    
+
+    // this.router.navigate(['panier']);
+
+    //  this.router.navigateByUrl('panier', {skipLocationChange: true}).then(()=>
+    //    this.router.navigate(['panier']));
+
+
   }
 
   onContinueByPayment(): void { 
