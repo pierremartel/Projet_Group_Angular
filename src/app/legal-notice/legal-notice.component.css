@@ -23,3 +23,25 @@ span {
 div {
     margin-top:10px;
 }
+
+/* Media Queries---------------------------------------------------------- */
+
+@media screen and (max-width: 920px) {
+
+    .main-content{
+        width:80%;
+    }
+
+    h1{
+        margin-bottom: 15px;
+    }
+
+    h2{
+        margin-bottom: 30px;
+
+    }
+
+    p{
+        margin-bottom: 10px;
+    }
+}

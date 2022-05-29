@@ -109,7 +109,7 @@ li, i{
 }
 
 #search{
-    width:3%;
+    width:10px;
     position:absolute;
     top:0px;
     right:-10px;
@@ -123,14 +123,14 @@ li, i{
     background-color:rgb(235, 227, 227);
     margin-top:50px;
     width:50%;
-    height: 40px;
+    height: 30px;
     border-radius: 10px 0 0 0px;
     position:relative;
 }
 
 .search input{
     width:100%;
-    height:100%;
+    height:30px;
     background-color:rgb(211, 197, 197);
     padding-left: 10px;
     padding-top: 5px;
@@ -187,7 +187,7 @@ a:hover {
     /* nav-secondaire ---------------*/
 
     .nav-secondaire{
-        height:50px;
+        height:45px;
     }
     .nav-secondaire a {
         display:none;
@@ -207,21 +207,21 @@ a:hover {
         display:none;
     }
 
-    #search {
-        width:3%;
-    }
 
     .header {
         flex-direction: column;
         height:33px;
+        margin-bottom:20px;
     }
 
     .search {
-        width : 98%;
+        width : 97%;
         bottom:110px;
         margin-top:44px;
-        border-radius:0px;
+        border: 1px solid;
     }
+
+    
 
     /* nav-principal --------------------*/
 

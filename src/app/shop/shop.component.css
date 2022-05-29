@@ -122,3 +122,37 @@ img {
 button:hover{
     background-color:green;
 }
+
+
+
+/* Media Queries---------------------------------------------------------- */
+
+@media screen and (max-width: 920px) {
+
+    .breadcrumb{
+        display:none;
+    }
+
+    .title h1{
+        font-size:24px;
+    }
+
+    .title h2 {
+        display:none;
+    }
+
+    .payment-mode{
+        width:90%;
+    }
+
+    .btn{
+        width:40%;
+        font-size:16px;
+
+    }
+
+    .btn button{
+        padding:5px;
+    }
+
+}
