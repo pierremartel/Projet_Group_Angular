@@ -25,7 +25,7 @@ export class ListPageProductsComponent implements OnInit {
     this.router.navigateByUrl('/produits/:id')
   }
 
-  addToDb(productId:any) : void {
+  addToCart(productId:any) : void {
 
     let addCartData = new FormData();
 
@@ -33,7 +33,7 @@ export class ListPageProductsComponent implements OnInit {
 
     addCartData.append("user_id", this.$user_id);
 
-    this.http.post('http://localhost:8000/admin/product/delete/', addCartData).subscribe(result => {
+    this.http.post('http://localhost:8000/cart/add', addCartData).subscribe(result => {
         console.log('addProduct', result );
   })
 }
@@ -41,6 +41,8 @@ export class ListPageProductsComponent implements OnInit {
 onDeleteProduct(ProductId:any) : void{
   this.http.get('http://localhost:8000/admin/product/delete/' + ProductId).subscribe(result => {
         console.log('deleteProduct', result );
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+        this.router.navigate(['produits']));
   })
 }
 

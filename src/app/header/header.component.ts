@@ -46,8 +46,8 @@ export class HeaderComponent implements OnInit {
 
 
       console.log('submitresearch', value);
-   this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
-   this.router.navigate(['recherche/', value.research]));
+      this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+      this.router.navigate(['recherche/', value.research]));
 
 
       // this.router.navigate(['recherche/', value.research])

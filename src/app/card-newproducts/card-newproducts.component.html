@@ -6,7 +6,7 @@
     <h2>{{ product.title }}</h2>
     <p>{{ product.price }}€</p>
     
-    <button class="new-product-button">
+    <button (click)="addToCart(product.id)" class="new-product-button">
       Ajouter <i class="fa-solid fa-cart-arrow-down"></i>
     </button>
   </div>

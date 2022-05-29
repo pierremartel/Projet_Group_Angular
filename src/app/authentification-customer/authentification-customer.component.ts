@@ -12,11 +12,11 @@ export class AuthentificationCustomerComponent implements OnInit {
 icon! : string;
 iconArrow! : string;
 iconPlus! : string;
-
-
 registerError : any = [];
-
 session : any = false;
+subscribeMessage! : string;
+loginMessage! : string;
+loginResult : any;
 
 
   constructor(private http: HttpClient) {}
@@ -34,18 +34,26 @@ session : any = false;
     console.log('register')
     
         this.http.post('http://localhost:8000/inscription', value).subscribe(result => {
-        console.log('dataRegister', result);
+          //  let decodeResult = JSON.parse(result)
+        console.log('dataRegister', typeof result);
         if(result !== true){
-          this.registerError = result
+          this.subscribeMessage = 'Vous devez renseigner tous les champs'
+          console.log(this.subscribeMessage)
       }
     })}
 
      onSubmitLogin(value:any) {
-       console.log('login')
-       console.log(value)
+       if(!value.email || !value.password){
+         this.loginMessage = 'Vous devez renseigner tous les champs'
+         return
+       }
+       console.log('register', value)
       this.http.post('http://localhost:8000/login', value).subscribe(result => {
-        console.log('dataLogin', result);
-        this.session = result;
+        this.loginResult = result
+        if(!this.loginResult.validation){
+          this.loginMessage = this.loginResult[0]
+        } else {
+          this.session = this.loginResult.session;
         sessionStorage.setItem('name', this.session.user.username);
         sessionStorage.setItem('firstname', this.session.user.userfirstname);
         sessionStorage.setItem('email', this.session.user.email);
@@ -54,6 +62,9 @@ session : any = false;
         sessionStorage.setItem('city', this.session.user.city);
         sessionStorage.setItem('role', this.session.user.role);
         sessionStorage.setItem('id', this.session.user.id);
+
+        }
+        
    })
     }
     

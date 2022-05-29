@@ -40,12 +40,12 @@ export class SearchComponent implements OnInit {
 
         // On stocke le résultat de la recherche dans une variable
         this.products = data;
-        console.log('okok', this.products.length);
+        // console.log('okok', this.products.length);
         // On boucle sur ce résultat
         for (let i = 0; i < this.products.length; i++){
           this.products[i].imageFileName = 'http://localhost:8000/uploads/images/products/' + this.products[i].imageFileName;
          }
-        console.log(this.products);
+        // console.log(this.products);
          
          
     })

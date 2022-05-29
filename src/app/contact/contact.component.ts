@@ -10,6 +10,8 @@ import {NgForm} from '@angular/forms';
 })
 export class ContactComponent {
 
+  message!: string
+
   constructor(private http: HttpClient) {}
 
   onSubmitContact(value:any) {
@@ -18,6 +20,11 @@ export class ContactComponent {
 
     this.http.post('http://localhost:8000/email', value).subscribe(result => {
         console.log('resultContact', result);
+        if(result === true){
+          this.message = 'Votre message a bien été envoyé'
+        } else {
+          this.message = 'Vous devez renseigner votre prénom, votre e-mail et votre message'
+        }
     })
 
   }

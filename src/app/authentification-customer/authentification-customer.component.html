@@ -17,7 +17,7 @@
 <main class="main">
     
     <div class="form-1">
-        <div class="error-message"></div>
+        <div *ngIf="subscribeMessage" class="error-message">{{subscribeMessage}}</div>
         <div class="title">
             <i class="fa-solid fa-plus fa-3x"></i>
             <h2>
@@ -71,7 +71,7 @@
     </div>
 
     <div *ngIf="session === false; else elseBlock"class="form-2">
-        <div class="error-message"></div>
+        <div *ngIf="loginMessage" class="error-message">{{loginMessage}}</div>
         <div class="title">
             <i class="fa-solid fa-arrow-right fa-3x"></i>
             <h2>
