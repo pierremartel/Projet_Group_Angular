@@ -36,7 +36,7 @@ loginResult : any;
     
         this.http.post('http://localhost:8000/inscription', value).subscribe(result => {
           //  let decodeResult = JSON.parse(result)
-        console.log('dataRegister', typeof result);
+        console.log('dataRegister', result);
         if(result !== true){
           this.subscribeMessage = 'Vous devez renseigner tous les champs'
           console.log(this.subscribeMessage)
