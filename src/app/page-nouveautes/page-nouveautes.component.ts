@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Component({
-  selector: 'app-promotion', 
-  templateUrl: './promotion.component.html',
-  styleUrls: ['./promotion.component.css']
+  selector: 'app-page-nouveautes', 
+  templateUrl: './page-nouveautes.component.html',
+  styleUrls: ['./page-nouveautes.component.css']
 })
-export class PromotionComponent implements OnInit {
+export class PageNouveautesComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) { }
 

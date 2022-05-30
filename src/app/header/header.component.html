@@ -1,7 +1,7 @@
 <header>
     <!-- Menu burger -->
-    <div class="contain-burger">
-        <div class="burger-nav"></div>
+    <div class="contain-burger" (click)="toggleShow()">
+        <div class="burger-nav "></div>
     </div>
     <!-- Menu burger -->
 
@@ -39,7 +39,9 @@
        
         <img id="map" [src]="map" alt="carte">
     </div>
+
     <nav class="nav-principal">
+
         <ul>
             <li>
                 <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
@@ -55,8 +57,7 @@
                 <a routerLink="contact" routerLinkActive="active">Contactez-nous</a>
             </li>
         </ul>
-       
-
 
     </nav>
+
 </header>

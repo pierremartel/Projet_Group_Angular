@@ -13,8 +13,8 @@ export class HeaderComponent implements OnInit {
   search! : string;
   map! : string;
   userEmail! : string | null;
-
-
+  isShown: boolean = false; // hidden by default
+  navBurger: any ;
 
 
   // picture! : string;
@@ -49,23 +49,28 @@ export class HeaderComponent implements OnInit {
       this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
       this.router.navigate(['recherche/', value.research]));
 
-
-
-    
-
       // this.router.navigate(['recherche/', value.research])
     
     }
 
-
-      
-    
     logout(){
       sessionStorage.clear();
       this.router.navigate([''])
     }
 
 
+    toggleShow() {
+      this.isShown = !this.isShown;
+      // console.log(this.isShown);
+      this.navBurger = document.getElementsByClassName('nav-principal');
+      // console.log(this.navBurger);
+      // this.navBurger.classList.toggle('showNavBar');
+
+    }
+
+    
+
+    
 
 
 }

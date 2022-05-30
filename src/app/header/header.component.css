@@ -147,7 +147,7 @@ li, i{
 .nav-principal{
     background-color:rgb(200, 231, 208);
     height:50px;
-    margin-bottom:30px;
+    margin-bottom:10px;
     
 }
 
@@ -179,6 +179,11 @@ a:hover {
     
 }
 
+.showNavBar{
+    display:block;
+    max-height: 1000px;
+}
+
 
 
 /* Media Queries---------------------------------------------------------- */
@@ -196,11 +201,12 @@ a:hover {
     i {
         margin:10px 15px 0px 15px;
     }
+    
 
     /* header -------------------------*/
     #logo {
         width:30%;
-        transform:translate(20px, -55px);
+        transform:translate(30px, -55px);
     }
 
     #map {
@@ -218,16 +224,29 @@ a:hover {
         width : 97%;
         bottom:110px;
         margin-top:44px;
-        border: 1px solid;
     }
 
     
 
-    /* nav-principal --------------------*/
+    /* nav-principal ------------------------------------------------------------------------------------*/
 
     .nav-principal {
         display : none;
+        height:350px;
+        position:relative;
+        top:-54px;
+        margin-bottom:0;
 
+    }
+
+    .nav-principal ul {
+        flex-direction: column;
+        
+    }
+    .nav-principal li {
+        margin-bottom: 10px;
+        text-align: center;
+        margin-top:30px;
     }
 
     /* burger menu */

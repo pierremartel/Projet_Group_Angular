@@ -72,9 +72,18 @@ form .box {
     height: 72%;
 }
 
+.foot_form input {
+    background-color:rgb(226, 226, 112);
+    padding : 10px;
+    border-radius: 10px;
+
+
+}
+
 .foot_form input:hover {
     transform: scale(1.05);
     cursor: pointer;
+    
 }
 
 @media screen and (max-width: 920px) {

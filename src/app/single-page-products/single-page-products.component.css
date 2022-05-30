@@ -99,7 +99,8 @@ button {
         margin-top:30px;
         display: flex;
         flex-direction:column;
-        
+        position:relative;
+        left:30px;
     }
 
     .content-card{
@@ -107,8 +108,13 @@ button {
         margin: auto;
     }
 
+    .content-card h1{
+        font-weight:700;
+        
+    }
+
     .content-description{
-        width:90%;
+        width:80%;
         margin-bottom: 20px;
     }
 
