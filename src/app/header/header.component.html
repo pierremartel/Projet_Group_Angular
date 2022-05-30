@@ -30,7 +30,7 @@
     <div class="header" >
         <img id="logo" [src]="logo" alt="logo" routerLink="">
         <form #researchForm="ngForm" method="post" (ngSubmit)="onResearchSubmit(researchForm.value)" class="search" >
-            <input type="text" name="research" placeholder="Taper votre recherche" ngModel >
+            <input type="text" name="research" placeholder="Tapez votre recherche" ngModel >
             <!-- <div *ngFor="let product of products" [product]="product">
                 <img [src]=product.imageFileName [alt]=product.title>
             </div> -->
