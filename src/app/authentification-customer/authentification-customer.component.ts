@@ -15,9 +15,10 @@ iconArrow! : string;
 iconPlus! : string;
 registerError : any = [];
 session : any = false;
-subscribeMessage! : string;
+subscribeMessage : any = [];
 loginMessage! : string;
 loginResult : any;
+
 
 
   constructor(private http: HttpClient, private router: Router,) {}
@@ -33,13 +34,17 @@ loginResult : any;
 
   onSubmit(value:any) {
     console.log('register')
+        this.subscribeMessage = [];
     
         this.http.post('http://localhost:8000/inscription', value).subscribe(result => {
           //  let decodeResult = JSON.parse(result)
         console.log('dataRegister', result);
         if(result !== true){
-          this.subscribeMessage = 'Vous devez renseigner tous les champs'
-          console.log(this.subscribeMessage)
+          this.registerError = result;
+          for(let i = 0; i < this.registerError.length; i++)
+          {
+            this.subscribeMessage.push(this.registerError[i][0].message)           
+          }
         } else {
           this.router.navigate(['']);
         }

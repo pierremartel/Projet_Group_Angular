@@ -17,7 +17,11 @@
 <main class="main">
     
     <div class="form-1">
-        <div *ngIf="subscribeMessage" class="error-message">{{subscribeMessage}}</div>
+        <div *ngIf="subscribeMessage" class="error-message">
+            <ul *ngFor="let message of subscribeMessage">
+                <li>{{message}}</li>  
+            </ul>
+        </div>
         <div class="title">
             <i class="fa-solid fa-plus fa-2x"></i>
             <h2>
