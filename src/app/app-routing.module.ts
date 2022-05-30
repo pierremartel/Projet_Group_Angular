@@ -5,7 +5,7 @@ import { ShopComponent } from './shop/shop.component';
 import { StripeComponent } from './stripe/stripe.component';
 import { AcknowledgementPageComponent } from './acknowledgement-page/acknowledgement-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { PromotionComponent } from './promotion/promotion.component';
+import { PageNouveautesComponent } from './page-nouveautes/page-nouveautes.component';
 import { ContactComponent } from './contact/contact.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
@@ -30,7 +30,7 @@ const routes: Routes = [
     { path : 'modifier/:id', component :UpdateProductComponent},
     { path : 'produits/supprimer', component :DeleteProductComponent},
     { path : 'produits', component :PageProductsComponent},
-    { path : 'promotion', component:PromotionComponent},
+    { path : 'promotion', component:PageNouveautesComponent},
     { path : 'produits/:id', component:SinglePageProductsComponent},
     { path : 'recherche/:research', component:SearchComponent},
 

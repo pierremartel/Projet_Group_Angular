@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardBestsellComponent } from './card-bestsell.component';
+import { PageNouveautesComponent } from './page-nouveautes.component';
 
-describe('CardBestsellComponent', () => {
-  let component: CardBestsellComponent;
-  let fixture: ComponentFixture<CardBestsellComponent>;
+describe('PromottionComponent', () => {
+  let component: PageNouveautesComponent;
+  let fixture: ComponentFixture<PageNouveautesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CardBestsellComponent ]
+      declarations: [ PageNouveautesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CardBestsellComponent);
+    fixture = TestBed.createComponent(PageNouveautesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

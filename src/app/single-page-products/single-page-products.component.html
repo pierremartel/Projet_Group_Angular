@@ -1,5 +1,5 @@
 <!-- FILE ARIANE------------------------------------------------ -->
-<nav aria-label="Breadcrumb" class="breadcrumb">
+<nav aria-label="Breadcrumb" class="breadcrumb" *ngIf="productById">
     <ul>
         <li><a routerLink="">Accueil</a></li>
         <li><a routerLink="/produits">Catalogue</a></li>
@@ -13,7 +13,7 @@
 
     <div class="content" *ngIf="productById">
         <div class="content-card">
-            <img [src]=productById.imageFileName alt=""productById.title>
+            <img [src]=productById.imageFileName alt="productById.title">
             <h1>{{productById.title}}</h1>
             <p>{{productById.price}}€</p>
         </div>
