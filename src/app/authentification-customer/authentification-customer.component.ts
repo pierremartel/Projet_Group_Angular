@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import {NgForm} from '@angular/forms';
 
 
@@ -19,7 +20,7 @@ loginMessage! : string;
 loginResult : any;
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router,) {}
 
   
   ngOnInit(): void {
@@ -39,15 +40,17 @@ loginResult : any;
         if(result !== true){
           this.subscribeMessage = 'Vous devez renseigner tous les champs'
           console.log(this.subscribeMessage)
-      }
+        } else {
+          this.router.navigate(['']);
+        }
     })}
 
-     onSubmitLogin(value:any) {
-       if(!value.email || !value.password){
-         this.loginMessage = 'Vous devez renseigner tous les champs'
-         return
-       }
-       console.log('register', value)
+    onSubmitLogin(value:any) {
+      if(!value.email || !value.password){
+        this.loginMessage = 'Vous devez renseigner tous les champs'
+        return
+      }
+      console.log('register', value)
       this.http.post('http://localhost:8000/login', value).subscribe(result => {
         this.loginResult = result
         if(!this.loginResult.validation){
@@ -64,6 +67,8 @@ loginResult : any;
         sessionStorage.setItem('id', this.session.user.id);
 
         }
+
+        this.router.navigate(['']);
         
    })
     }
